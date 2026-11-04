@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Grocery Report</title>
+<meta name="description" content="Prototipo de The Grocery Report: la app que lee los tickets del súper y ayuda a los hogares a gastar menos en la compra.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&family=Inter:wght@400..500&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--ink:#17191c;--paper:#ffffff;--mist:#f2f2f3;--fog:#fafafb;--slate:#666a74;--hair:#ececec;--peach:#fbe1d1;--sienna:#5d2a1a;
+  --serif:'Source Serif 4',Georgia,serif;--sans:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --float:0 0 0 1px rgba(4,23,43,.05),0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1)}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.5}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:56px max(20px,env(safe-area-inset-right,0px)) 80px max(20px,env(safe-area-inset-left,0px))}
+.brand{font-family:var(--serif);font-size:22px}
+.brand em,h1 em{font-style:italic}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(40px,6vw,72px);line-height:1.1;letter-spacing:-.02em;margin-top:64px;max-width:18ch;text-wrap:balance}
+.lead{font-size:19px;color:var(--slate);max-width:56ch;margin-top:20px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.card{display:flex;flex-direction:column;gap:10px;background:var(--mist);border-radius:24px;padding:28px;transition:transform .15s,box-shadow .15s}
+.card:hover,.card:focus-visible{transform:translateY(-3px);box-shadow:var(--float);background:var(--paper)}
+.card:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+.card .tag{font-size:14px;color:var(--slate)}
+.card h2{font-family:var(--serif);font-weight:400;font-size:30px;line-height:1.15}
+.card p{font-size:16px;color:var(--slate)}
+.card .go{margin-top:auto;padding-top:14px;font-size:16px}
+.card.peach{background:var(--peach);color:var(--sienna)}
+.card.peach p,.card.peach .tag{color:var(--sienna)}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px}
+.note{margin-top:48px;font-size:14px;color:var(--slate);border-top:1px solid var(--hair);padding-top:20px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}.row2{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main class="wrap">
+  <div class="brand">The Grocery <em>Report</em></div>
+  <h1>Lo que gastas en el súper, <em>por fin</em> claro</h1>
+  <p class="lead">La app que lee los tickets del súper, avisa cuando algo sube y dice dónde te sale más barato. Aquí puedes probar el prototipo en sus tres versiones.</p>
+
+  <div class="grid">
+    <a class="card" href="web.html"><span class="tag">Página web</span><h2>La propuesta</h2><p>Qué hace la app, para quién es, funciones, principios y precios.</p><span class="go">Abrir la web →</span></a>
+    <a class="card" href="grocery-report-app-movil.html"><span class="tag">App móvil</span><h2>Así se usa</h2><p>Inicio, precios, ahorro, lista, meta y perfil. Mejor desde el móvil; en ordenador se ve dentro de un marco de teléfono.</p><span class="go">Abrir la app móvil →</span></a>
+    <a class="card" href="app.html"><span class="tag">App para ordenador</span><h2>Todo el análisis</h2><p>Tickets, productos, comparador de precios, categorías, la cesta, objetivos y perfil.</p><span class="go">Abrir la app →</span></a>
+  </div>
+  <div class="row2">
+    <a class="card peach" href="https://claude.ai/artifact/DTjziSQLCQX46xPj5HQdAf" target="_blank" rel="noopener"><span class="tag">Pitch · 10 minutos</span><h2>La presentación</h2><p>Problema, mercado, modelo de negocio, funnel 2027 y la ronda.</p><span class="go">Ver el pitch ↗</span></a>
+    <a class="card" href="grocery-report-funnel.xlsx"><span class="tag">Modelo de ventas · Excel</span><h2>El funnel 2027</h2><p>Supuestos, funnel, mes a mes y escenarios pesimista, base y optimista.</p><span class="go">Descargar el Excel ↓</span></a>
+  </div>
+
+  <p class="note">Prototipo navegable con datos y precios de ejemplo: no son datos de clientes ni precios reales de ningún supermercado. Precios de la suscripción provisionales.</p>
+</main>
+</body>
+</html>

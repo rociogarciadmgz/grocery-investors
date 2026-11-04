@@ -1,0 +1,311 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>The Grocery Report Web</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;1,8..60,400&family=Inter:wght@400..500&display=swap" rel="stylesheet">
+<style>
+/* Revista de producto: titulares serif sobre papel blanco, artefactos de la app flotando, un solo acento melocotón */
+:root{color-scheme:light;
+  --ink:#17191c;--paper:#ffffff;--mist:#f2f2f3;--fog:#fafafb;--slate:#777b86;--ash:#979799;--smoke:#a3a6af;--peach:#fbe1d1;--sienna:#5d2a1a;--hair:#ececec;
+  --serif:'Source Serif 4','Tiempos Headline',Georgia,serif;
+  --sans:'Inter',ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
+  --float:0 0 0 1px rgba(4,23,43,.05),0 20px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-weight:400;font-size:17px;line-height:1.5;overflow-x:hidden;font-feature-settings:"tnum"}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2{font-family:var(--serif);font-weight:400;line-height:1.15;text-wrap:balance}
+h1 em,h2 em{font-style:italic}
+h2{font-size:clamp(36px,5vw,64px);letter-spacing:-.015em}
+h3{font-weight:500;font-size:20px;letter-spacing:-.009em;line-height:1.3}
+.muted{color:var(--slate)}
+.tag{font-size:14px;color:var(--ash)}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-size:16px;font-weight:400;height:46px;padding:0 22px;border-radius:9999px;border:1px solid var(--ink);background:var(--ink);color:var(--paper);cursor:pointer;transition:opacity .15s}
+.btn:hover{opacity:.85}
+.btn.ghost{background:transparent;color:var(--ink)}
+.link{font-size:16px;display:inline-block;padding:12px 0}
+.link:hover{text-decoration:underline}
+a:focus-visible,.btn:focus-visible,input:focus-visible,button:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+section{padding-block:80px}
+.fog{background:var(--fog)}
+.card{background:var(--mist);border-radius:24px;padding:28px 24px}
+.art{background:var(--paper);border-radius:20px;box-shadow:var(--float);padding:16px 18px}
+.sec-head{max-width:760px;margin-bottom:40px}
+.sec-head p{font-size:18px;color:var(--slate);margin-top:12px;max-width:56ch}
+.photo{position:relative;border-radius:12px;overflow:hidden;background:var(--mist);aspect-ratio:4/3;display:flex;align-items:flex-end;padding:16px}
+.photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.photo span{position:relative;font-size:14px;color:var(--slate);background:var(--paper);border-radius:9999px;padding:4px 12px}
+.photo svg{position:absolute;left:50%;top:44%;transform:translate(-50%,-50%);width:56px;height:56px;stroke:var(--smoke);fill:none;stroke-width:1.2}
+.photo svg.illo{left:0;top:0;transform:none;width:100%;height:100%;stroke:none}
+
+/* nav */
+.nav{padding-block:18px}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.brand{font-family:var(--serif);font-size:22px;letter-spacing:-.01em}
+.brand em{font-style:italic}
+.links{display:flex;gap:32px;font-size:16px}
+.links a:hover{color:var(--slate)}
+.nav-cta{display:flex;align-items:center;gap:20px}
+@media(max-width:900px){.links,.nav-cta .link{display:none}}
+
+/* hero */
+.hero{padding-block:56px 96px;position:relative}
+.hero-c{text-align:center;max-width:860px;margin:0 auto;position:relative;z-index:2}
+.hero-c h1{font-size:clamp(44px,7.4vw,90px);letter-spacing:-.025em;line-height:1.08}
+.hero-c p{font-size:20px;line-height:1.4;color:var(--slate);max-width:44ch;margin:24px auto 0}
+.ctas{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:32px}
+.stage{position:relative;max-width:1200px;margin:0 auto}
+.floats{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:start;margin-top:72px;position:relative;z-index:3}
+.fl-1{transform:translateY(28px) rotate(-1.5deg)}
+.fl-2{transform:translateY(-6px)}
+.fl-3{transform:translateY(44px)}
+.fl-4{transform:rotate(1.5deg)}
+.k{font-size:14px;color:var(--slate)}
+.v{font-weight:500;font-size:22px;letter-spacing:-.01em;margin-top:2px}
+.d{font-size:14px;color:var(--slate)}
+.t-row{display:flex;justify-content:space-between;gap:8px;font-size:14px;padding:7px 0;border-bottom:1px solid var(--hair)}
+.t-row:last-child{border-bottom:none}
+.chk{display:flex;align-items:center;gap:10px;font-size:14px;padding:6px 0}
+.chk i{width:18px;height:18px;border-radius:50%;border:1px solid var(--smoke);flex:none}
+.chk.on i{background:var(--ink);border-color:var(--ink)}
+.chk.on span{color:var(--smoke);text-decoration:line-through}
+.av{width:28px;height:28px;border-radius:50%;display:inline-grid;place-items:center;font-size:11px;font-weight:500;background:var(--mist)}
+@media(max-width:1000px){.floats{grid-template-columns:repeat(2,1fr)}.floats .art{transform:none}}
+@media(max-width:620px){.floats{grid-template-columns:1fr}}
+
+/* grids */
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.g3 h3{margin:10px 0 8px}
+.g3 p{font-size:16px}
+@media(max-width:900px){.g3{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+@media(max-width:900px){.split{grid-template-columns:1fr;gap:40px}}
+.steps{list-style:none;display:grid;gap:0;margin-top:8px}
+.steps li{display:grid;grid-template-columns:48px 1fr;gap:12px;padding:22px 0;border-top:1px solid var(--hair)}
+.steps li:last-child{border-bottom:1px solid var(--hair)}
+.steps .n{font-family:var(--serif);font-size:28px;font-style:italic;line-height:1}
+.steps p{font-size:16px;color:var(--slate);margin-top:4px}
+
+/* phone */
+.phone{width:310px;max-width:100%;margin:0 auto;border-radius:40px;background:var(--paper);box-shadow:var(--float);padding:22px 18px;display:grid;gap:10px}
+.phone .hi{font-family:var(--serif);font-size:38px;line-height:1.1;letter-spacing:-.015em}
+.phone .hi em{font-style:italic}
+.phone .bx{background:var(--mist);border-radius:16px;padding:14px}
+.meter{height:6px;border-radius:9999px;background:var(--paper);overflow:hidden;margin-top:10px}
+.meter i{display:block;height:100%;background:var(--ink);border-radius:9999px}
+.phone .tabs{display:flex;justify-content:space-around;font-size:11px;color:var(--slate);padding-top:6px;border-top:1px solid var(--hair)}
+.phone .tabs b{font-weight:500;color:var(--ink)}
+.feat-list{display:grid;gap:4px}
+.feat-list div{padding:20px 0;border-bottom:1px solid var(--hair)}
+.feat-list p{font-size:16px;color:var(--slate);margin-top:4px}
+
+/* peach */
+.chain-row{display:grid;grid-template-columns:110px 1fr 72px;gap:12px;align-items:center;font-size:15px;padding:7px 0}
+.chain-row .tr{height:6px;border-radius:9999px;background:var(--mist);overflow:hidden}
+.chain-row .tr i{display:block;height:100%;background:var(--smoke);border-radius:9999px}
+.chain-row.best{font-weight:500}
+.chain-row.best .tr i{background:var(--ink)}
+.chain-row span:last-child{text-align:right}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.chips span{font-size:15px;background:var(--mist);border-radius:9999px;padding:6px 14px}
+.peach{background:var(--peach);color:var(--sienna);border-radius:24px;padding:48px 40px;display:grid;grid-template-columns:1.2fr 1fr;gap:40px}
+.peach h2{color:var(--sienna)}
+.peach ul{list-style:none;display:grid;gap:18px;font-size:18px}
+.peach li{display:flex;gap:12px}
+.peach li::before{content:"→"}
+@media(max-width:820px){.chain-row{display:grid;grid-template-columns:110px 1fr 72px;gap:12px;align-items:center;font-size:15px;padding:7px 0}
+.chain-row .tr{height:6px;border-radius:9999px;background:var(--mist);overflow:hidden}
+.chain-row .tr i{display:block;height:100%;background:var(--smoke);border-radius:9999px}
+.chain-row.best{font-weight:500}
+.chain-row.best .tr i{background:var(--ink)}
+.chain-row span:last-child{text-align:right}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:24px}
+.chips span{font-size:15px;background:var(--mist);border-radius:9999px;padding:6px 14px}
+.peach{grid-template-columns:1fr;padding:32px 24px}}
+
+/* audiences */
+.aud .card{padding:12px 12px 24px}
+.aud .photo{aspect-ratio:3/2;margin-bottom:16px}
+.aud .card .tx{padding:0 12px}
+
+/* pricing */
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
+.plan{background:var(--mist);border-radius:24px;padding:32px 28px;display:flex;flex-direction:column;min-height:100%}
+.plan.rec{background:var(--paper);box-shadow:var(--float)}
+.plan .pr{font-family:var(--serif);font-size:56px;letter-spacing:-.02em;line-height:1.1;margin:16px 0 4px}
+.plan .pr small{font-family:var(--sans);font-size:16px;color:var(--slate);letter-spacing:0}
+.plan ul{list-style:none;margin:24px 0 28px;display:grid;gap:10px;font-size:16px;flex:1}
+.plan li::before{content:"·";margin-right:10px;color:var(--slate)}
+@media(max-width:900px){.plans{grid-template-columns:1fr}}
+
+/* cta */
+.cta{text-align:center}
+.cta h2 em{font-style:italic}
+.composer{display:flex;align-items:center;gap:8px;max-width:520px;margin:32px auto 0;background:var(--paper);border:1px solid var(--hair);border-radius:16px;padding:8px 8px 8px 20px}
+.composer input{flex:1;min-width:0;border:none;font:inherit;font-size:16px;background:transparent;color:var(--ink)}
+.composer input::placeholder{color:var(--smoke)}
+.composer input:focus{outline:none}
+.composer button{width:40px;height:40px;border-radius:50%;border:none;background:var(--ink);color:var(--paper);font-size:18px;cursor:pointer;flex:none}
+.ok{font-size:18px;margin-top:28px}
+footer{border-top:1px solid var(--hair)}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:32px;font-size:14px;color:var(--slate)}
+</style>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="ph" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 8"/></symbol></defs></svg>
+
+<header class="nav"><div class="wrap">
+  <a class="brand" href="#top">The Grocery <em>Report</em></a>
+  <nav class="links" aria-label="Secciones"><a href="#como">Cómo funciona</a><a href="#app">La app</a><a href="#supers">Supermercados</a><a href="#para">Para quién</a><a href="#precios">Precios</a></nav>
+  <div class="nav-cta"><a class="link" href="#app">Ver la app →</a><a class="btn" href="#acceso">Probar gratis</a></div>
+</div></header>
+
+<main>
+<section class="hero" id="top"><div class="wrap">
+  <div class="stage">
+    <div class="hero-c">
+      <h1>Lo que gastas en el súper, <em>por fin</em> claro</h1>
+      <p>Conecta tu correo o haz una foto del ticket. La app te avisa cuando algo sube y te dice dónde te sale más barato. Tú decides.</p>
+      <div class="ctas"><a class="btn" href="#acceso">Probar 30 días gratis</a><a class="btn ghost" href="#app">Ver la app</a></div>
+    </div>
+        <div class="floats">
+      <div class="art fl fl-1" aria-label="Ticket de ejemplo">
+        <div class="k">Mercadona · 24/10</div>
+        <div class="t-row" style="margin-top:8px"><span>Leche semidesnatada x6</span><span>5,34 €</span></div>
+        <div class="t-row"><span>Plátano canario</span><span>2,63 €</span></div>
+        <div class="t-row"><span>Pechuga de pollo</span><span>6,85 €</span></div>
+        <div class="t-row"><span>Tomate rama</span><span>2,49 €</span></div>
+        <div class="t-row" style="font-weight:500"><span>Total</span><span>17,31 €</span></div>
+      </div>
+      <div class="art fl fl-2">
+        <div class="k">Aceite de oliva · Carrefour</div>
+        <div class="v">10,20 €</div>
+        <div class="d">↑ 14 % desde agosto</div>
+        <svg viewBox="0 0 220 60" width="100%" style="margin-top:8px" aria-hidden="true"><path d="M2 50 C 30 48, 50 46, 80 40 S 130 34, 150 26 S 200 10, 218 8" fill="none" stroke="#5d2a1a" stroke-width="2"/><circle cx="218" cy="8" r="3.5" fill="#5d2a1a"/></svg>
+      </div>
+      <div class="art fl fl-3">
+        <div class="k">Meta de la semana</div>
+        <div class="v">48,20 € <span class="d">de 51,47 €</span></div>
+        <div class="meter" style="background:var(--mist)"><i style="width:94%"></i></div>
+        <div class="d" style="margin-top:8px">Te quedan 3,27 € hasta el viernes</div>
+      </div>
+      <div class="art fl fl-4">
+        <div class="k" style="display:flex;justify-content:space-between"><span>Lista de la compra</span><span class="av">Tú</span></div>
+        <div class="chk on" style="margin-top:6px"><i></i><span>Leche semidesnatada</span></div>
+        <div class="chk on"><i></i><span>Huevos L x12</span></div>
+        <div class="chk"><i></i><span>Pan de molde integral</span></div>
+        <div class="chk"><i></i><span>Tomate rama</span></div>
+      </div>
+    </div>
+  </div>
+  <p class="tag" style="text-align:center;margin-top:40px">Datos y precios de ejemplo</p>
+</div></section>
+
+<section class="fog" id="porque"><div class="wrap">
+  <div class="sec-head"><h2>La compra sube y nadie la mira <em>por el lado del dinero</em></h2></div>
+  <div class="g3">
+    <article class="card"><span class="tag">El problema</span><h3>Precios al alza</h3><p>La compra del súper es uno de los gastos más frecuentes de un hogar y su precio no deja de subir. Casi nadie sabe en qué se le va.</p></article>
+    <article class="card"><span class="tag">El hueco</span><h3>Apps de recetas, no de gasto</h3><p>Las apps de compra que existen se centran en recetas o en nutrición. Ninguna analiza el ticket para ahorrar.</p></article>
+    <article class="card"><span class="tag">La tendencia</span><h3>Datos de tu propia vida</h3><p>Cada vez más gente mide sus pasos, su sueño o sus finanzas. La compra es lo siguiente.</p></article>
+  </div>
+</div></section>
+
+<section id="como"><div class="wrap split">
+  <div>
+    <h2>Del ticket al <em>ahorro</em></h2>
+    <ol class="steps">
+      <li><span class="n">1</span><div><h3>Captura</h3><p>Conecta tu Gmail y la app recoge sola los correos con «ticket» en el asunto. Si es en papel, hazle una foto.</p></div></li>
+      <li><span class="n">2</span><div><h3>Lectura</h3><p>La IA saca producto, cantidad, precio y tienda, y pone cada línea en su categoría. Si algo está mal, lo cambias y aprende.</p></div></li>
+      <li><span class="n">3</span><div><h3>Ahorro</h3><p>Avisos cuando algo sube, dónde te sale más barato, presupuesto semanal y una lista con lo que de verdad consumes.</p></div></li>
+    </ol>
+  </div>
+  <div class="photo" style="aspect-ratio:4/5" data-photo="bolsa"><svg class="illo" viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ilustración: bolsa de papel con la compra y el ticket"><rect width="400" height="500" fill="#f2f2f3"/><rect y="392" width="400" height="108" fill="#e6e6e9"/><path d="M150 175C128 115 146 72 178 60C186 102 176 142 162 178Z" fill="#a3a6af"/><path d="M172 175C172 108 203 76 236 70C231 112 210 148 186 178Z" fill="#777b86"/><g transform="rotate(14 249 150)"><rect x="232" y="72" width="34" height="156" rx="17" fill="#d9b8a3"/><path d="M240 98l20 6M238 128l20 6M236 158l20 6" stroke="#8f5640" stroke-width="4" stroke-linecap="round" fill="none"/></g><rect x="196" y="112" width="30" height="110" rx="10" fill="#17191c"/><rect x="204" y="90" width="14" height="28" rx="4" fill="#17191c"/><rect x="199" y="150" width="24" height="34" rx="3" fill="#fbe1d1"/><path d="M110 172h180l18 230H92Z" fill="#fbe1d1"/><path d="M110 172h180l-6 22H116Z" fill="#f3cdb6"/><path d="M200 194v208" stroke="#efc6ad" stroke-width="2" fill="none"/><circle cx="318" cy="408" r="24" fill="#5d2a1a"/><path d="M310 386l8 7 8-7" stroke="#777b86" stroke-width="3" stroke-linecap="round" fill="none"/><circle cx="354" cy="420" r="17" fill="#8f5640"/><g transform="rotate(-8 100 360)"><path d="M58 296h84v124l-10.5-6-10.5 6-10.5-6-10.5 6-10.5-6-10.5 6-10.5-6-10.5 6Z" fill="#ffffff"/><path d="M72 318h56M72 334h56M72 350h40M72 366h56" stroke="#d9dadd" stroke-width="4" stroke-linecap="round" fill="none"/><path d="M72 390h24M104 390h24" stroke="#17191c" stroke-width="4" stroke-linecap="round" fill="none"/></g></svg></div>
+</div></section>
+
+<section class="fog" id="app"><div class="wrap split">
+  <div class="phone" aria-label="Pantalla de inicio de la app con datos de ejemplo">
+    <div class="tag">Jueves, 29 de octubre</div>
+    <div class="hi">Hola, esta semana vas <em>bien</em></div>
+    <div class="bx"><div class="k">Esta semana</div><div class="v">48,20 € <span class="d">de 51,47 €</span></div><div class="meter"><i style="width:94%"></i></div></div>
+    <div class="bx"><div class="k">Puedes ahorrar</div><div class="v">12,88 € al mes</div><div class="d">con 14 cambios pequeños</div></div>
+    <div class="bx"><div class="k">Sube</div><div style="font-weight:500;font-size:15px">Aceite de oliva +14 %</div><div class="d">En Mercadona, 8,95 €</div></div>
+    <div class="tabs"><b>Inicio</b><span>Ahorro</span><span>+</span><span>Lista</span><span>Meta</span></div>
+  </div>
+  <div>
+    <h2>Pensada para el <em>móvil</em></h2>
+    <div class="feat-list">
+      <div><h3>Avisos de precio</h3><p>Cuando un producto que compras sube más de lo normal en tu súper.</p></div>
+      <div><h3>Dónde comprar más barato</h3><p>Otro súper o un producto parecido, con lo que ahorrarías al mes.</p></div>
+      <div><h3>Una lista que se hace sola</h3><p>Con tu ritmo real de compra y las cestas de 3 o 4 productos que repites.</p></div>
+    </div>
+    <a class="link" href="#acceso">Apuntarme a la beta →</a>
+  </div>
+</div></section>
+
+<section id="supers"><div class="wrap split">
+  <div>
+    <h2>Todos los supermercados, <em>en una sola app</em></h2>
+    <p class="muted" style="font-size:18px;margin-top:16px;max-width:50ch">La app se conecta con las webs y apps de los supermercados, lee sus precios y te dice dónde te sale más barato cada producto de tu lista.</p>
+    <div class="chips"><span>Alcampo</span><span>Carrefour</span><span>Dia</span><span>Eroski</span><span>Lidl</span><span>Mercadona</span></div>
+    <p class="tag" style="margin-top:20px">Precios públicos de cada cadena. Sin acuerdos comerciales ni recomendaciones pagadas.</p>
+  </div>
+  <div class="art" style="padding:24px 24px 16px">
+    <div class="k" style="display:flex;justify-content:space-between;gap:8px"><span>Aceite de oliva virgen extra 1 L</span><span>Hoy, 08:00</span></div>
+    <div class="v" style="margin:6px 0 12px">Desde 8,79 € en Lidl</div>
+    <div class="chain-row best"><span>Lidl</span><div class="tr"><i style="width:91%"></i></div><span>8,79 €</span></div><div class="chain-row"><span>Mercadona</span><div class="tr"><i style="width:93%"></i></div><span>8,95 €</span></div><div class="chain-row"><span>Alcampo</span><div class="tr"><i style="width:94%"></i></div><span>9,05 €</span></div><div class="chain-row"><span>Dia</span><div class="tr"><i style="width:96%"></i></div><span>9,29 €</span></div><div class="chain-row"><span>Carrefour</span><div class="tr"><i style="width:98%"></i></div><span>9,49 €</span></div><div class="chain-row"><span>Eroski</span><div class="tr"><i style="width:100%"></i></div><span>9,65 €</span></div>
+    <div class="d" style="margin-top:10px">Precios de ejemplo, no son precios reales</div>
+  </div>
+</div></section>
+
+<section id="funciones"><div class="wrap">
+  <div class="sec-head"><h2>Lo justo para ahorrar <em>desde el primer mes</em></h2><p>El MVP trae cuatro funciones. El report mensual y los retos llegan en la fase 2.</p></div>
+  <div class="g3">
+    <article class="card"><span class="tag">MVP</span><h3>Precios y avisos</h3><p>Histórico de cada producto por tienda y aviso cuando algo sube.</p></article>
+    <article class="card"><span class="tag">MVP</span><h3>Dónde te sale más barato</h3><p>En qué súper comprar cada producto o qué producto parecido cuesta menos.</p></article>
+    <article class="card"><span class="tag">MVP</span><h3>Lista adaptada a tu consumo</h3><p>Se hace sola. La app nunca compra por ti: tú confirmas siempre.</p></article>
+    <article class="card"><span class="tag">MVP</span><h3>Objetivos y presupuesto</h3><p>Ponte una meta como «bajar 20 € a la semana» y sigue cómo vas.</p></article>
+    <article class="card"><span class="tag">Fase 2</span><h3>Report mensual</h3><p>Cuánto has gastado, qué ha subido y cuánto has ahorrado, cada mes.</p></article>
+    <article class="card"><span class="tag">Fase 2</span><h3>Retos en familia</h3><p>Una cuenta para todo el hogar, con retos y puntos para ahorrar entre todos.</p></article>
+  </div>
+  <div class="peach" style="margin-top:64px">
+    <h2>Tus tickets, <em>tus reglas</em></h2>
+    <ul><li>Sin acuerdos con supermercados: leemos sus precios públicos, pero nadie paga por salir recomendado.</li><li>La app no compra ni hace pedidos por ti. Siempre confirmas tú.</li><li>Tus datos son tuyos. Puedes exportarlo todo cuando quieras.</li></ul>
+  </div>
+</div></section>
+
+<section class="fog" id="para"><div class="wrap">
+  <div class="sec-head"><h2>Para quien hace <em>la compra</em></h2></div>
+  <div class="g3 aud">
+    <article class="card"><div class="photo" data-photo="ahorro"><svg class="illo" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ilustración: carro de la compra lleno"><rect width="600" height="400" fill="#f2f2f3"/><rect y="335" width="600" height="65" fill="#e6e6e9"/><rect x="200" y="150" width="70" height="95" rx="6" fill="#fbe1d1"/><rect x="210" y="166" width="50" height="16" rx="3" fill="#5d2a1a"/><rect x="282" y="132" width="26" height="113" rx="9" fill="#17191c"/><rect x="288" y="112" width="14" height="26" rx="4" fill="#17191c"/><rect x="318" y="172" width="60" height="73" rx="8" fill="#ffffff"/><path d="M318 192h60" stroke="#a3a6af" stroke-width="5" fill="none"/><path d="M394 196c10-18 32-22 46-15-8 15-28 21-46 15Z" fill="#777b86"/><circle cx="400" cy="222" r="22" fill="#8f5640"/><circle cx="430" cy="230" r="18" fill="#d9b8a3"/><path d="M150 195h320l-30 110H190Z" fill="none" stroke="#17191c" stroke-width="8" stroke-linejoin="round"/><path d="M168 235h292M180 270h270" stroke="#17191c" stroke-width="4" fill="none"/><path d="M230 195l10 110M290 195l3 110M350 195l-3 110M410 195l-10 110" stroke="#17191c" stroke-width="4" fill="none"/><path d="M88 145h42l20 50" fill="none" stroke="#17191c" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><path d="M190 305l-10 30h268" fill="none" stroke="#17191c" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="205" cy="355" r="16" fill="#17191c"/><circle cx="420" cy="355" r="16" fill="#17191c"/><circle cx="205" cy="355" r="6" fill="#f2f2f3"/><circle cx="420" cy="355" r="6" fill="#f2f2f3"/></svg></div><div class="tx"><span class="tag">Ahorro</span><h3>Quien quiere ahorrar</h3><p>Quiere saber en qué se le va el dinero del súper y gastar menos sin complicarse.</p></div></article>
+    <article class="card"><div class="photo" data-photo="familia"><svg class="illo" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ilustración: compra semanal sobre la encimera de la cocina"><rect width="600" height="400" fill="#f2f2f3"/><path d="M0 90h600M0 180h600M150 0v270M300 0v270M450 0v270" stroke="#e6e6e9" stroke-width="3" fill="none"/><rect y="270" width="600" height="130" fill="#d9dadd"/><rect y="270" width="600" height="14" fill="#a3a6af"/><rect x="110" y="335" width="90" height="7" rx="3.5" fill="#a3a6af"/><rect x="400" y="335" width="90" height="7" rx="3.5" fill="#a3a6af"/><path d="M98 140c-6-52 4-82 20-97 4 36 0 72-8 97Z" fill="#777b86"/><path d="M128 140c4-46 22-72 42-80-6 35-18 64-30 80Z" fill="#a3a6af"/><path d="M68 140h124l12 130H56Z" fill="#fbe1d1"/><path d="M68 140h124l-4 16H72Z" fill="#f3cdb6"/><path d="M240 162h58v108h-58Z" fill="#ffffff"/><path d="M240 162l10-24h38l10 24Z" fill="#e6e6e9"/><rect x="250" y="196" width="38" height="22" rx="2" fill="#fbe1d1"/><rect x="320" y="240" width="120" height="30" rx="6" fill="#a3a6af"/><circle cx="345" cy="236" r="13" fill="#ffffff"/><circle cx="380" cy="236" r="13" fill="#ffffff"/><circle cx="415" cy="236" r="13" fill="#ffffff"/><rect x="462" y="214" width="112" height="56" rx="27" fill="#d9b8a3"/><path d="M488 226l10 20M514 226l10 20M540 226l10 20" stroke="#8f5640" stroke-width="4" stroke-linecap="round" fill="none"/></svg></div><div class="tx"><span class="tag">Familias</span><h3>Quien compra para toda la casa</h3><p>Planifica los menús y hace la compra para una familia de cuatro.</p></div></article>
+    <article class="card"><div class="photo" data-photo="datos"><svg class="illo" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Ilustración: ticket de la compra y móvil con gráficos sobre la mesa"><rect width="600" height="400" fill="#e6e6e9"/><circle cx="110" cy="110" r="56" fill="#ffffff"/><circle cx="110" cy="110" r="40" fill="#8f5640"/><rect x="158" y="98" width="30" height="24" rx="12" fill="#ffffff"/><g transform="rotate(-6 300 200)"><path d="M232 34h140v326l-11.7-7-11.7 7-11.7-7-11.7 7-11.6-7-11.7 7-11.7-7-11.7 7-11.7-7-11.6 7-11.7-7-11.7 7Z" fill="#ffffff"/><path d="M252 64h100M252 92h100M252 116h70M252 140h100M252 164h84M252 188h100M252 212h60M252 236h100" stroke="#d9dadd" stroke-width="6" stroke-linecap="round" fill="none"/><path d="M252 290h40M312 290h40" stroke="#17191c" stroke-width="7" stroke-linecap="round" fill="none"/></g><g transform="rotate(8 476 210)"><rect x="410" y="90" width="132" height="242" rx="24" fill="#17191c"/><rect x="420" y="104" width="112" height="214" rx="14" fill="#ffffff"/><rect x="434" y="122" width="60" height="8" rx="4" fill="#d9dadd"/><rect x="434" y="140" width="84" height="12" rx="6" fill="#17191c"/><rect x="436" y="250" width="12" height="40" rx="3" fill="#d9dadd"/><rect x="456" y="236" width="12" height="54" rx="3" fill="#d9dadd"/><rect x="476" y="222" width="12" height="68" rx="3" fill="#17191c"/><rect x="496" y="242" width="12" height="48" rx="3" fill="#17191c"/><rect x="434" y="176" width="84" height="30" rx="8" fill="#fbe1d1"/></g><rect x="70" y="290" width="130" height="10" rx="5" transform="rotate(-18 135 295)" fill="#5d2a1a"/></svg></div><div class="tx"><span class="tag">Datos</span><h3>Los amantes de los datos</h3><p>Ya miden sus pasos o sus finanzas y quieren ver también su compra.</p></div></article>
+  </div>
+</div></section>
+
+<section id="precios"><div class="wrap">
+  <div class="sec-head"><h2>Un mes <em>gratis</em></h2><p>30 días de prueba en cualquier plan, porque con una semana no hay datos suficientes. Precios orientativos, pendientes de validar.</p></div>
+  <div class="plans">
+    <div class="plan"><span class="tag">Básico</span><div class="pr">0 € <small>/ mes</small></div><span class="muted">Para probar</span><ul><li>10 tickets al mes</li><li>Resumen y categorías</li><li>1 persona</li></ul><a class="btn ghost" href="#acceso">Empezar</a></div>
+    <div class="plan"><span class="tag">Individual</span><div class="pr">2,99 € <small>/ mes</small></div><span class="muted">Para una persona</span><ul><li>Tickets ilimitados</li><li>Gmail conectado</li><li>Avisos y recomendaciones</li><li>Objetivos y presupuesto</li></ul><a class="btn ghost" href="#acceso">Probar 30 días</a></div>
+    <div class="plan rec"><span class="tag">Familia · recomendado</span><div class="pr">6 € <small>/ mes</small></div><span class="muted">Hasta 4 personas, 1,50 € por persona. +1 € al mes por cada persona extra</span><ul><li>Todo lo del plan Individual</li><li>Una cuenta para todo el hogar</li><li>Retos en familia</li><li>Report mensual</li></ul><a class="btn" href="#acceso">Probar 30 días</a></div>
+  </div>
+</div></section>
+
+<section class="fog cta" id="acceso"><div class="wrap">
+  <h2>Apúntate a <em>la beta</em></h2>
+  <p class="muted" style="font-size:18px;margin-top:12px">Nació con 138 tickets y 1.415 líneas de producto.</p>
+  <form class="composer" id="f" novalidate><label for="email" style="position:absolute;left:-9999px">Email</label><input id="email" type="email" placeholder="tu@email.com" required><button type="submit" aria-label="Apuntarme">→</button></form>
+</div></section>
+</main>
+
+<footer><div class="wrap"><span class="brand" style="font-size:18px;color:var(--ink)">The Grocery <em>Report</em></span><span>Borrador v0.4 · Cifras de ejemplo · 2026</span></div></footer>
+
+<script>
+document.getElementById('f').addEventListener('submit',e=>{
+  e.preventDefault();const i=document.getElementById('email');
+  if(!i.value||!i.checkValidity()){i.value='';i.placeholder='Escribe un email válido';i.focus();return}
+  e.target.outerHTML='<p class="ok">Hecho. Te escribiremos cuando abra la beta.</p>';
+});
+</script>
+
+</body></html>
