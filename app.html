@@ -148,6 +148,86 @@ td.best{font-weight:600;color:var(--sienna);background:var(--peach)!important}
   .tbl-wrap{overflow-x:auto}
   .mini{grid-template-columns:1fr 1fr}
 }
+
+/* nuevas piezas: avisos, prueba, corrección de tickets, bienvenida, plan, privacidad, tu año */
+.nav .sep{font-size:12px;color:var(--ash);padding:14px 12px 6px}
+.bell{position:relative;width:40px;height:40px;border-radius:50%;border:1px solid var(--hair);background:var(--paper);cursor:pointer;display:grid;place-items:center;flex:none}
+.bell svg{width:18px;height:18px;stroke:var(--ink);fill:none;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.bell b{position:absolute;top:-4px;right:-4px;min-width:18px;height:18px;border-radius:9999px;background:var(--sienna);color:var(--paper);font-size:11px;font-weight:500;display:grid;place-items:center;padding:0 5px}
+.bell b:empty{display:none}
+.trial{display:flex;align-items:center;gap:12px;flex-wrap:wrap;background:var(--fog);border:1px solid var(--hair);border-radius:24px;padding:10px 10px 10px 20px;margin-bottom:16px;font-size:14px}
+.trial span{flex:1;min-width:220px}
+.trial.pe{background:var(--peach);border-color:var(--peach);color:var(--sienna);padding:16px 20px}
+.nt{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border:none;border-bottom:1px solid var(--hair);cursor:pointer;width:100%;background:none;text-align:left;font:inherit;color:inherit}
+.nt .dt{width:8px;height:8px;border-radius:50%;background:var(--sienna);margin-top:8px;flex:none}
+.nt.read .dt{background:transparent}
+.nt.read .nm{color:var(--slate)}
+.nt .nm{flex:1}
+.nt small{display:block;color:var(--slate);font-size:13px;margin-top:2px}
+.nt .go{color:var(--smoke);font-size:20px;line-height:1}
+.ocr{display:block;font-size:11px;color:var(--ash);letter-spacing:.03em;margin-top:2px}
+.chip.flag{background:var(--peach);color:var(--sienna)}
+.mini-b{border:1px solid var(--hair);background:var(--paper);border-radius:9999px;padding:2px 10px;font-size:12px;cursor:pointer;margin-left:6px}
+.edit-in{border:1px solid var(--hair);border-radius:10px;padding:7px 10px;font-size:13px;width:100%;background:var(--paper)}
+.edit-in.n{text-align:right;width:82px}
+.ln-x{border:none;background:var(--mist);width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:15px}
+.rev{background:var(--peach);color:var(--sienna);border-radius:16px;padding:14px 16px;margin:14px 0;display:flex;gap:12px;align-items:center;flex-wrap:wrap;font-size:14px}
+.rev span{flex:1;min-width:200px}
+.modal.wide{width:min(620px,calc(100% - 32px));max-height:calc(100vh - 32px);overflow-y:auto}
+.dots{display:flex;gap:6px;margin-bottom:18px}
+.dots i{width:24px;height:4px;border-radius:9999px;background:var(--hair)}
+.dots i.on{background:var(--ink)}
+.opt{display:flex;gap:14px;align-items:flex-start;border:1px solid var(--hair);border-radius:16px;padding:16px;cursor:pointer;margin-top:10px;background:var(--paper);text-align:left;width:100%;font:inherit;color:inherit}
+.opt.on{border-color:var(--ink);box-shadow:0 0 0 1px var(--ink)}
+.opt svg{width:26px;height:26px;stroke:var(--ink);fill:none;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round;flex:none;margin-top:2px}
+.opt b{font-weight:500}
+.opt small{display:block;color:var(--slate);font-size:13px;margin-top:2px}
+.ok-list{list-style:none;margin:14px 0}
+.ok-list li{padding:9px 0 9px 26px;position:relative;font-size:14px;border-bottom:1px solid var(--hair)}
+.card .ok-list li{border-bottom-color:#e4e4e6}
+.ok-list li:before{content:'✓';position:absolute;left:2px;color:var(--ink)}
+.ob-steps{margin:18px 0 4px}
+.ob-steps p{font-size:14px;color:var(--smoke);padding:5px 0}
+.ob-steps p.on{color:var(--ink)}
+.insight{background:var(--peach);color:var(--sienna);border-radius:20px;padding:22px;margin-top:16px}
+.insight .lab{color:var(--sienna)}
+.insight .big{font-family:var(--serif);font-size:48px;line-height:1.05;letter-spacing:-.02em;margin:6px 0 4px}
+.ob-foot{display:flex;align-items:center;gap:10px;justify-content:flex-end;margin-top:22px;flex-wrap:wrap}
+.ob-foot .skip{margin-right:auto}
+.modal .mini div{background:var(--mist)}
+.skip{border:none;background:none;color:var(--slate);cursor:pointer;font-size:14px;text-decoration:underline;text-underline-offset:3px}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.plan{background:var(--mist);border-radius:24px;padding:24px;display:flex;flex-direction:column;gap:4px}
+.plan.cur{background:var(--paper);box-shadow:var(--float)}
+.plan h3{font-size:20px}
+.plan .pr{font-family:var(--serif);font-size:42px;line-height:1.1;margin:10px 0 0;letter-spacing:-.02em}
+.plan ul{list-style:none;margin:12px 0 18px;font-size:14px;color:var(--slate)}
+.plan li{padding:4px 0}
+.plan .btn{margin-top:auto}
+.yr-hero{background:var(--peach);color:var(--sienna);border-radius:28px;padding:36px}
+.yr-hero .lab{color:var(--sienna)}
+.yr-hero h2{font-size:clamp(36px,4.6vw,60px);margin:10px 0 12px;max-width:20ch}
+.yr-hero h2 em{font-style:italic}
+.yr{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+.yr .card{padding:24px;min-height:148px;display:flex;flex-direction:column;gap:4px}
+.yr .v{font-family:var(--serif);font-size:32px;line-height:1.12;letter-spacing:-.015em;margin:6px 0 2px}
+.yr .v em{font-style:italic}
+.yr .card.ink{background:var(--ink);color:var(--paper)}
+.yr .card.ink .lab,.yr .card.ink .muted{color:var(--smoke)}
+@media(max-width:1100px){.plans,.yr{grid-template-columns:1fr 1fr}}
+@media(max-width:820px){.plans,.yr{grid-template-columns:1fr}.nav .sep{display:none}}
+
+/* inicio simplificado */
+.hero-n{font-family:var(--serif);font-size:52px;line-height:1.05;letter-spacing:-.02em}
+.hero-n span{font-family:var(--ui);font-size:16px;color:var(--slate);letter-spacing:0}
+.todo{display:flex;gap:14px;align-items:center;width:100%;padding:14px 0;border:none;border-bottom:1px solid #e4e4e6;background:none;text-align:left;font:inherit;color:inherit;cursor:pointer}
+.todo:last-child{border-bottom:none}
+.todo .nm{flex:1;min-width:0}
+.todo small{display:block;font-size:13px;color:var(--slate);margin-top:2px}
+.todo .chip{min-width:66px;text-align:center}
+.todo .go{color:var(--smoke);font-size:20px}
+.todo:hover .nm{text-decoration:underline;text-underline-offset:3px}
+.mini .up-g,.mini .up-r,.mini .up-n{margin-top:4px}
 </style>
 <div class="shell">
   <aside class="side">
@@ -156,16 +236,20 @@ td.best{font-weight:600;color:var(--sienna);background:var(--peach)!important}
       <button data-v="inicio" class="on"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7M5 9.5V20h14V9.5"/></svg>Inicio</button>
       <button data-v="objetivos"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r="0.5"/></svg>Objetivos</button>
       <button data-v="ahorro"><svg viewBox="0 0 24 24"><path d="M18 6.5A7 7 0 1 0 18 17.5M4 10h10M4 14h10"/></svg>Ahorro</button>
+      <button data-v="anual"><svg viewBox="0 0 24 24"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg>Tu año</button>
       <button data-v="tickets"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2z M9 8h6M9 12h6"/></svg>Tickets<span class="cnt" id="cntT"></span></button>
       <button data-v="productos"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg>Productos y precios</button>
       <button data-v="precios"><svg viewBox="0 0 24 24"><path d="M20 12l-8 8-9-9V3h8z"/><circle cx="7.5" cy="7.5" r="1.5"/></svg>Comparar precios</button>
       <button data-v="categorias"><svg viewBox="0 0 24 24"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>Categorías</button>
       <button data-v="cesta"><svg viewBox="0 0 24 24"><circle cx="6" cy="7" r="2.5"/><circle cx="18" cy="7" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 8.5l3 7.5M16 8.5l-3 7.5M8.5 7h7"/></svg>La cesta</button>
       <button data-v="lista"><svg viewBox="0 0 24 24"><path d="M5 7h14l-1.5 12h-11zM9 7V5a3 3 0 016 0v2"/></svg>Lista de la compra<span class="cnt" id="cntL"></span></button>
+      <div class="sep">Cuenta</div>
       <button data-v="perfil"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg>Perfil</button>
+      <button data-v="plan"><svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/></svg>Plan y facturación</button>
+      <button data-v="privacidad"><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Privacidad y datos</button>
     </nav>
     <div class="foot">
-      <span class="lab">Plan Familia</span>
+      <span class="lab">Plan Familia · prueba gratis</span>
       <div class="avatar"><i>RG</i><div>Mi hogar<br><span class="muted" style="font-size:11px">4 miembros · 6 supermercados</span></div></div>
     </div>
   </aside>
@@ -174,6 +258,7 @@ td.best{font-weight:600;color:var(--sienna);background:var(--peach)!important}
     <div class="top">
       <div class="t"><div class="eyebrow" id="eyebrow">Inicio</div><h1 id="title">Resumen</h1></div>
       <span class="demo">Datos de ejemplo</span>
+      <button class="bell" id="bellBtn" aria-label="Avisos"><svg viewBox="0 0 24 24"><path d="M6 16V11a6 6 0 0112 0v5l2 2H4z"/><path d="M10 21h4"/></svg><b id="bellN"></b></button>
       <button class="btn" id="upBtn">+ Añadir ticket</button>
     </div>
     <div class="content" id="view"></div>
@@ -326,58 +411,101 @@ function lineChart(series){
     g+=`<path d="${d}" fill="none" stroke="none" stroke-width="4.5"/><path d="${d}" fill="none" stroke="${s.c}" stroke-width="3"/>`+s.pts.map(p=>`<circle cx="${X(p[0])}" cy="${Y(p[1])}" r="4" fill="${s.c}" stroke="none"><title>${fd(new Date(p[0]))} · ${eur(p[1])}</title></circle>`).join('')});
   return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Evolución del precio">${g}</svg>`;
 }
-function network(rs){
-  const ids=[...new Set(rs.flatMap(r=>[r.a,r.b]))],W=480,H=320,cx=W/2,cy=H/2,rad=118;
-  const pos={};ids.forEach((id,i)=>{const a=-Math.PI/2+i*2*Math.PI/ids.length;pos[id]=[cx+rad*1.35*Math.cos(a),cy+rad*Math.sin(a)]});
-  const deg={};rs.forEach(r=>{deg[r.a]=(deg[r.a]||0)+1;deg[r.b]=(deg[r.b]||0)+1});
-  let g='';rs.slice().reverse().forEach((r,i)=>{const top=i===rs.length-1,[x1,y1]=pos[r.a],[x2,y2]=pos[r.b];g+=`<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${top?'#17191c':'#d9dadd'}" stroke-opacity="${top?1:.45}" stroke-width="${1+r.lift*.9}"/>`});
-  ids.forEach(id=>{const[x,y]=pos[id],big=deg[id]>1,nm=P[id].name.split(' ').slice(0,2).join(' ').toUpperCase();
-    g+=`<circle cx="${x}" cy="${y}" r="${big?11:8}" fill="${big?'#17191c':'#f2f2f3'}" stroke="none"/><text x="${x}" y="${y+(y<cy?-16:24)}" font-size="10" fill="#777b86" text-anchor="middle">${esc(nm)}</text>`});
-  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Red de productos comprados juntos">${g}</svg>`;
+
+/* ---------- red de productos (co-compra) ---------- */
+function pairStats(){
+  const tk=T.filter(t=>t.store!=='F'),N=tk.length,c={},cc={};
+  tk.forEach(t=>{const ids=[...new Set(t.lines.map(l=>l.pid))];ids.forEach(a=>c[a]=(c[a]||0)+1);
+    for(let i=0;i<ids.length;i++)for(let j=i+1;j<ids.length;j++){const k=Math.min(ids[i],ids[j])+'-'+Math.max(ids[i],ids[j]);cc[k]=(cc[k]||0)+1}});
+  const all=Object.entries(cc).map(([k,v])=>{const[a,b]=k.split('-').map(Number);return{a,b,n:v,sup:v/N,lift:(v/N)/((c[a]/N)*(c[b]/N))}});
+  return{N,c,all};
 }
+let netSel=null,netMin=1.2;
+function netData(){
+  const st=pairStats();
+  const edges=st.all.filter(r=>r.n>=5&&r.lift>=netMin).sort((x,y)=>y.lift*Math.sqrt(y.n)-x.lift*Math.sqrt(x.n)).slice(0,18);
+  const ids=[...new Set(edges.flatMap(r=>[r.a,r.b]))];
+  const deg={};edges.forEach(r=>{deg[r.a]=(deg[r.a]||0)+1;deg[r.b]=(deg[r.b]||0)+1});
+  if(netSel===null||!ids.includes(netSel))netSel=ids.slice().sort((x,y)=>(deg[y]||0)-(deg[x]||0)||st.c[y]-st.c[x])[0];
+  return{...st,edges,ids,deg};
+}
+const NETPOS={};
+function netLayout(d,W,H){
+  const key=W+'x'+H+':'+d.edges.map(e=>e.a+'-'+e.b).join(',');if(NETPOS[key])return NETPOS[key];
+  const n=d.ids.length,pos={},k=Math.sqrt(W*H/Math.max(n,1))*.8;
+  d.ids.forEach((id,i)=>{const a=i*2.399963;const r=Math.sqrt((i+.5)/n)*Math.min(W,H)*.42;pos[id]={x:W/2+r*Math.cos(a),y:H/2+r*Math.sin(a)}});
+  const padX=Math.min(70,W*.17),padY=28;
+  for(let it=0;it<400;it++){
+    const t=k*.12*(1-it/400)+.5,disp={};d.ids.forEach(id=>disp[id]={x:0,y:0});
+    for(let i=0;i<n;i++)for(let j=i+1;j<n;j++){const A=pos[d.ids[i]],B=pos[d.ids[j]];let dx=A.x-B.x,dy=(A.y-B.y)*1.6;let dist=Math.hypot(dx,dy)||.01;const f=k*k/dist;dx/=dist;dy/=dist;
+      disp[d.ids[i]].x+=dx*f;disp[d.ids[i]].y+=dy*f;disp[d.ids[j]].x-=dx*f;disp[d.ids[j]].y-=dy*f}
+    d.edges.forEach(e=>{const A=pos[e.a],B=pos[e.b];let dx=A.x-B.x,dy=A.y-B.y;const dist=Math.hypot(dx,dy)||.01;const f=dist*dist/k*(.6+e.lift*.25);dx/=dist;dy/=dist;
+      disp[e.a].x-=dx*f;disp[e.a].y-=dy*f;disp[e.b].x+=dx*f;disp[e.b].y+=dy*f});
+    d.ids.forEach(id=>{const p=pos[id],q=disp[id];q.x+=(W/2-p.x)*.35;q.y+=(H/2-p.y)*.6;const L=Math.hypot(q.x,q.y)||1;
+      p.x=Math.min(W-padX,Math.max(padX,p.x+q.x/L*Math.min(L,t)));p.y=Math.min(H-padY,Math.max(padY,p.y+q.y/L*Math.min(L,t)))});
+  }
+  const xs=d.ids.map(i=>pos[i].x),ys=d.ids.map(i=>pos[i].y),x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
+  const sc=Math.min((W-2*padX)/((x1-x0)||1),(H-2*padY-30)/((y1-y0)||1)),ox=(W-(x1-x0)*sc)/2,oy=(H-(y1-y0)*sc)/2;
+  d.ids.forEach(i=>{pos[i].x=ox+(pos[i].x-x0)*sc;pos[i].y=oy+(pos[i].y-y0)*sc});
+  return NETPOS[key]=pos;
+}
+const shortName=nm=>{let w=nm.replace(/ x\d+.*$/,'').replace(/ \d.*$/,'').split(' ');while(w.join(' ').length>20&&w.length>1)w.pop();while(w.length>1&&['de','del','la','en','y'].includes(w[w.length-1]))w.pop();return w.join(' ')};
+function netSVG(d,W,H){
+  if(!d.ids.length)return '<p class="muted" style="padding:40px 0;text-align:center">No hay parejas con esa fuerza. Baja el filtro.</p>';
+  const pos=netLayout(d,W,H),sel=netSel,maxL=Math.max(...d.edges.map(e=>e.lift)),minL=Math.min(...d.edges.map(e=>e.lift));
+  const nb=new Set(d.edges.filter(e=>e.a===sel||e.b===sel).flatMap(e=>[e.a,e.b]));
+  const rr=id=>6+15*Math.sqrt(d.c[id]/d.N);
+  let g='';
+  d.edges.slice().sort((x,y)=>((x.a===sel||x.b===sel)?1:0)-((y.a===sel||y.b===sel)?1:0)).forEach(e=>{const on=e.a===sel||e.b===sel,A=pos[e.a],B=pos[e.b],w=1.2+4.5*(e.lift-minL)/((maxL-minL)||1);
+    g+=`<line x1="${A.x.toFixed(1)}" y1="${A.y.toFixed(1)}" x2="${B.x.toFixed(1)}" y2="${B.y.toFixed(1)}" stroke="${on?'#5d2a1a':'#a3a6af'}" stroke-opacity="${on?.9:.35}" stroke-width="${w.toFixed(1)}" stroke-linecap="round"><title>${esc(P[e.a].name)} + ${esc(P[e.b].name)} · ${e.n} veces juntos · ${num(e.lift,1)}×</title></line>`});
+  d.ids.forEach(id=>{const p=pos[id],r=rr(id),isSel=id===sel,isNb=nb.has(id)&&!isSel,dim=!isSel&&!isNb;
+    const below=p.y<H-40;
+    g+=`<g data-node="${id}" style="cursor:pointer" opacity="${dim?.8:1}"><circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${(r+8).toFixed(1)}" fill="transparent"/><circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${r.toFixed(1)}" fill="${isSel?'#5d2a1a':isNb?'#17191c':'#ffffff'}" stroke="${isSel?'#5d2a1a':isNb?'#17191c':'#a3a6af'}" stroke-width="1.5"/>
+    <text x="${p.x.toFixed(1)}" y="${(below?p.y+r+14:p.y-r-7).toFixed(1)}" font-size="${isSel?12.5:11.5}" font-weight="${isSel?600:400}" fill="${isSel?'#5d2a1a':dim?'#777b86':'#17191c'}" text-anchor="middle" style="paint-order:stroke;stroke:#f2f2f3;stroke-width:4px;stroke-linejoin:round">${esc(shortName(P[id].name))}</text><title>${esc(P[id].name)} · en ${num(d.c[id]/d.N*100,0)} % de tus compras</title></g>`});
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="Red de productos que compras juntos" style="display:block;touch-action:manipulation">${g}</svg>`;
+}
+function netPartners(d,id,k=5){
+  return d.all.filter(e=>(e.a===id||e.b===id)&&e.n>=3&&e.lift>1).map(e=>({o:e.a===id?e.b:e.a,n:e.n,conf:e.n/d.c[id],lift:e.lift})).sort((x,y)=>y.conf*y.lift-x.conf*x.lift).slice(0,k);
+}
+const NETFILT=[[1.2,'Todas'],[1.5,'Fuertes'],[1.8,'Muy fuertes']];
 
 /* ---------- vistas ---------- */
 const V={};
-const titles={inicio:['Inicio','Resumen de <span class="b">octubre</span>'],tickets:['Tickets','Todos los <span class="b">tickets</span>'],productos:['Productos y precios','Lo que <span class="b">compras</span>'],categorias:['Categorías','Gasto por <span class="b">categoría</span>'],cesta:['La cesta','Lo que va <span class="b">junto</span>'],lista:['Lista de la compra','Tu próxima <span class="b">compra</span>'],perfil:['Perfil','Tu <span class="b">perfil</span>'],precios:['Comparar precios','Precio en cada <span class="b">súper</span>'],objetivos:['Objetivos','Bajar el <span class="b">gasto</span>'],ahorro:['Ahorro','Dónde <span class="b">ahorrar</span>']};
+const titles={inicio:['Inicio','Resumen de <span class="b">octubre</span>'],tickets:['Tickets','Todos los <span class="b">tickets</span>'],productos:['Productos y precios','Lo que <span class="b">compras</span>'],categorias:['Categorías','Gasto por <span class="b">categoría</span>'],cesta:['La cesta','Lo que va <span class="b">junto</span>'],lista:['Lista de la compra','Tu próxima <span class="b">compra</span>'],perfil:['Perfil','Tu <span class="b">perfil</span>'],precios:['Comparar precios','Precio en cada <span class="b">súper</span>'],objetivos:['Objetivos','Bajar el <span class="b">gasto</span>'],ahorro:['Ahorro','Dónde <span class="b">ahorrar</span>'],anual:['Tu año','Tu 2026 en el <span class="b">súper</span>'],plan:['Plan y facturación','Tu <span class="b">plan</span>'],privacidad:['Privacidad y datos','Tus datos, <span class="b">tuyos</span>']};
 
 V.inicio=()=>{
-  const oct=T.filter(t=>inMonth(t,9)),sep=T.filter(t=>inMonth(t,8));
-  const so=sum(oct.map(t=>t.total)),ss=sum(sep.map(t=>t.total));
-  const w=weekly(12),lastComplete=w.slice(-5,-1),prev=w.slice(0,-5);
-  const wa=sum(lastComplete.map(x=>x.v))/4,wp=sum(prev.map(x=>x.v))/prev.length;
-  const tmO=so/oct.length,tmS=ss/sep.length;
-  const co=catSpend(t=>inMonth(t,9)),cs=catSpend(t=>inMonth(t,8));
-  const cats=CATS.map(c=>({c,v:co[c],p:cs[c]})).sort((a,b)=>b.v-a.v);const mx=Math.max(...cats.map(c=>Math.max(c.v,c.p)));
+  const oct=T.filter(t=>inMonth(t,9)),sep=T.filter(t=>inMonth(t,8)),so=sum(oct.map(t=>t.total)),ss=sum(sep.map(t=>t.total));
+  const w=weekly(13),bAvg=sum(w.slice(0,8).map(x=>x.v))/8,target=bAvg-GOAL,cw=w[w.length-1],left=target-cw.v;
+  const wa=sum(w.slice(-5,-1).map(x=>x.v))/4,tmO=so/oct.length,tmS=ss/sep.length;
   const ps=productStats();
-  // alerta: mayor subida de precio por tienda (últimos 30 días frente a los primeros 30)
   let al=null;P.forEach(p=>['A','B'].forEach(st=>{const L=ps[p.id].lines.filter(l=>l.st===st);const a=L.filter(l=>l.d-START<35*DAY),b=L.filter(l=>TODAY-l.d<35*DAY);
     if(a.length&&b.length){const v=sum(b.map(x=>x.pu))/b.length/(sum(a.map(x=>x.pu))/a.length)-1;if(!al||v>al.v)al={p,st,v,now:b[b.length-1].pu}}}));
-  const other=al?ps[al.p.id].lines.filter(l=>l.st!==al.st&&l.st!=='F').pop():null;
-  const recent=T.slice(0,5);
+  const rr=recs(),save=sum(rr.map(r=>r.save)),rev=T.find(t=>flagged(t).length),li=listItems().filter(s=>!done.has(s.p.id)).length;
+  const todo=[];
+  if(al)todo.push(['Sube',`${al.p.name} +${num(al.v*100,0)} %`,`En ${STORES[al.st]} desde agosto · ahora ${eur(al.now)}`,`data-p="${al.p.id}"`,1]);
+  if(rr.length)todo.push(['Ahorra',`Puedes ahorrar ${eur(save)} al mes`,`${rr.length} cambios fáciles de súper o de producto`,'data-go="ahorro"',0]);
+  if(rev)todo.push(['Revisa',`${flagged(rev).length} ${flagged(rev).length>1?'líneas':'línea'} por revisar`,`Ticket de ${STORES[rev.store]} del ${fdm(rev.date)}`,`data-t="${rev.id}"`,1]);
+  todo.push(['Lista',`${li} productos para el sábado`,'Tu lista ya está hecha con tu ritmo de compra','data-go="lista"',0]);
   return `
-  <div class="kpis">
-    <div class="card kpi"><div class="lab">Gasto de octubre</div><div class="v">${eur(so)}</div><div class="d">${delta(so/ss-1)} <span class="muted">vs. sept.</span></div></div>
-    <div class="card kpi"><div class="lab">Media semanal · 4 sem.</div><div class="v">${eur(wa)}</div><div class="d">${delta(wa/wp-1)} <span class="muted">vs. anteriores</span></div></div>
-    <div class="card kpi"><div class="lab">Tickets en octubre</div><div class="v">${oct.length}</div><div class="d"><span class="up-n">${oct.length===sep.length?'= 0':(oct.length>sep.length?'▲ +':'▼ −')+Math.abs(oct.length-sep.length)} vs. sept.</span></div></div>
-    <div class="card kpi"><div class="lab">Ticket medio</div><div class="v">${eur(tmO)}</div><div class="d">${delta(tmO/tmS-1)} <span class="muted">vs. sept.</span></div></div>
+  <div class="row2" style="margin-top:0">
+    <div class="card pn"><div class="pn-h"><h3>Esta semana</h3><span class="lab">${fdm(cw.s)} – ${fdm(new Date(cw.s.getTime()+6*DAY))}</span></div>
+      <div class="hero-n">${eur(cw.v)} <span>de ${eur(target)}</span></div>
+      <div class="prog" style="height:10px;margin-top:12px"><i style="width:${Math.min(100,cw.v/target*100)}%;${left<0?'background:var(--ko)':''}"></i></div>
+      <div>${left>=0?`<span class="up-g">Te quedan ${eur(left)} hasta el viernes</span>`:`<span class="up-r">Te has pasado ${eur(-left)}</span>`} <span class="muted" style="font-size:13px">· meta: bajar ${GOAL} € a la semana</span></div>
+      <div style="margin-top:22px">${barChart(weekly(12),8)}</div>
+      <div class="pn-h" style="margin:8px 0 0"><span class="note" style="margin:0">Gasto por semana · negro: últimas 4</span><button class="btn s" data-go="objetivos">Ver mi meta</button></div></div>
+    <div class="card pn"><div class="pn-h"><h3>Para hoy</h3><span class="lab">${todo.length} cosas</span></div>
+      ${todo.map(x=>`<button class="todo" ${x[3]}><span class="chip ${x[4]?'flag':''}">${x[0]}</span><span class="nm">${esc(x[1])}<small>${esc(x[2])}</small></span><span class="go" aria-hidden="true">›</span></button>`).join('')}</div>
   </div>
-  <div class="row2">
-    <div class="card pn"><div class="pn-h"><h3>Gasto semanal</h3><span class="lab">Sábado a viernes · 12 semanas</span></div>${barChart(w,8)}<div class="note">Negro: últimas 4 semanas · Gris: semanas anteriores · La última semana está en curso</div></div>
-    <div class="card pn"><div class="pn-h"><h3>Por categoría</h3><span class="lab">Octubre</span></div>
-      ${cats.slice(0,7).map(c=>`<div class="hb" data-cat="${c.c}"><span>${c.c}</span><div class="tr"><i style="width:${c.v/mx*100}%"></i><i class="g" style="width:${c.p/mx*100}%"></i></div><span class="num">${eur(c.v)}</span></div>`).join('')}
-      <div class="note">Línea gris: septiembre</div></div>
-  </div>
-  ${al?`<div class="alert"><b>Subida de precio</b><span><b style="color:var(--tinta);letter-spacing:0">${esc(al.p.name)}</b> ha subido un ${num(al.v*100,0)} % en ${STORES[al.st]} desde agosto (ahora ${eur(al.now)}).${other?` En ${STORES[other.st]} lo pagaste a ${eur(other.pu)}.`:''}</span></div>`:''}
   <div class="row2b">
-    <div class="card pn"><div class="pn-h"><h3>Últimos tickets</h3><button class="btn s" data-go="tickets">Ver todos</button></div>
-      <table><tbody>${recent.map(t=>`<tr class="click" data-t="${t.id}"><td>${DIA[t.date.getDay()]} ${fdm(t.date)}</td><td>${STORES[t.store]}</td><td class="n">${t.lines.length} líneas</td><td class="n">${eur(t.total)}</td></tr>`).join('')}</tbody></table></div>
-    <div class="card pn"><div class="pn-h"><h3>Dónde compras</h3><span class="lab">Octubre · % gasto</span></div>
-      ${['A','B','F'].map(s=>{const v=sum(oct.filter(t=>t.store===s).map(t=>t.total));return `<div class="hb" style="cursor:default"><span>${STORES[s]}</span><div class="tr"><i style="width:${v/so*100}%"></i></div><span class="num">${num(v/so*100,0)} %</span></div>`}).join('')}
-      <div class="mini" style="margin-bottom:0">
-        <div><span class="lab">Día favorito</span><span class="num">Sábado</span></div>
-        <div><span class="lab">Productos distintos</span><span class="num">${new Set(oct.flatMap(t=>t.lines.map(l=>l.pid))).size}</span></div>
-        <div><span class="lab">Líneas</span><span class="num">${num(sum(oct.map(t=>t.lines.length)),0)}</span></div>
+    <div class="card pn"><div class="pn-h"><h3>Octubre</h3><button class="btn s" data-go="categorias">Ver en qué se va</button></div>
+      <div class="mini" style="margin:0">
+        <div><span class="lab">Gasto</span><span class="num">${eur(so)}</span>${delta(so/ss-1)}</div>
+        <div><span class="lab">Media semanal</span><span class="num">${eur(wa)}</span><span class="muted" style="font-size:12px">últimas 4 sem.</span></div>
+        <div><span class="lab">Ticket medio</span><span class="num">${eur(tmO)}</span>${delta(tmO/tmS-1)}</div>
       </div></div>
+    <div class="card pn"><div class="pn-h"><h3>Últimos tickets</h3><button class="btn s" data-go="tickets">Ver todos</button></div>
+      <table><tbody>${T.slice(0,3).map(t=>`<tr class="click" data-t="${t.id}"><td>${DIA[t.date.getDay()]} ${fdm(t.date)}</td><td>${STORES[t.store]}</td><td class="n">${eur(t.total)}</td></tr>`).join('')}</tbody></table></div>
   </div>`;
 };
 
@@ -422,14 +550,16 @@ V.categorias=()=>{
 };
 
 V.cesta=()=>{
-  const rs=rules(),bk=baskets();
+  const rs=rules(),bk=baskets(),d=netData(),sel=netSel,pt=sel!=null?netPartners(d,sel):[];
   return `<div class="row2" style="margin-top:0">
-    <div class="card pn"><div class="pn-h"><h3>Red de productos</h3><span class="lab">Supermercados · ${T.filter(t=>t.store!=='F').length} tickets</span></div>${network(rs.slice(0,8))}<div class="note">Grosor de la línea: lift · En azul, la pareja más fuerte</div></div>
-    <div class="card pn"><div class="pn-h"><h3>Cómo leerlo</h3></div>
-      <p class="muted" style="margin-bottom:14px"><b style="color:var(--tinta)">Soporte</b>: en qué parte de los tickets aparecen juntos.</p>
-      <p class="muted" style="margin-bottom:14px"><b style="color:var(--tinta)">Confianza</b>: si compras el primero, cuántas veces también te llevas el segundo.</p>
-      <p class="muted"><b style="color:var(--tinta)">Lift</b>: cuántas veces más se compran juntos de lo que tocaría por azar. Por encima de 1, hay relación.</p>
-      <div class="mini" style="grid-template-columns:1fr 1fr"><div><span class="lab">Parejas detectadas</span><span class="num">${rs.length}</span></div><div><span class="lab">Lift máximo</span><span class="num b">${num(rs[0]?rs[0].lift:0,1)}×</span></div></div></div>
+   <div class="card pn"><div class="pn-h"><h3>Red de productos</h3><div class="seg">${NETFILT.map(([v,l])=>`<button data-nm="${v}" class="${netMin===v?'on':''}">${l}</button>`).join('')}</div></div>
+    ${netSVG(d,640,440)}
+    <div class="note">Cada círculo es un producto: cuanto más grande, en más compras aparece. Las líneas unen lo que compras junto más de lo normal; cuanto más gruesa, más relación. Toca un producto para verlo.</div></div>
+   <div class="card pn">${sel!=null?`<span class="lab">Si compras</span><h2 style="font-size:32px;margin:6px 0 4px">${esc(P[sel].name)}</h2><p class="muted" style="font-size:14px">Está en el ${num(d.c[sel]/d.N*100,0)} % de tus compras en el súper (${d.c[sel]} de ${d.N}).</p>
+    <div class="pn-h" style="margin:20px 0 2px"><h3>…también te sueles llevar</h3></div>
+    ${pt.map(x=>`<button class="todo" data-node="${x.o}"><span class="nm">${esc(P[x.o].name)}<small>${num(x.conf*100,0)} % de las veces · ${x.n} compras juntos</small></span><span class="chip ${x.lift>=1.8?'flag':''}">${num(x.lift,1)}×</span></button>`).join('')||'<p class="muted">Todavía no hay parejas claras.</p>'}
+    <button class="btn s" data-p="${sel}" style="margin-top:16px">Ver sus precios</button>`:''}
+    <div class="note" style="margin-top:24px">El % es la confianza: si compras uno, cuántas veces va el otro. El número con × es el lift: cuántas veces más van juntos de lo que tocaría por azar.</div></div>
   </div>
   <div class="card pn" style="margin-top:16px"><div class="pn-h"><h3>Cestas habituales</h3><span class="lab">3 y 4 productos · ${bk.N} tickets</span></div>
    <div class="row2b" style="margin-top:0">${[['De 3 productos',bk.b3],['De 4 productos',bk.b4]].map(([l,a])=>`<div style="min-width:0"><span class="lab">${l}</span>${a.map(o=>`<div class="list-item"><span class="nm">${o.ids.map(i=>esc(P[i].name)).join(' + ')}</span><span class="num b">${num(o.sup*100,0)} %</span></div>`).join('')}</div>`).join('')}</div>
@@ -459,11 +589,11 @@ V.lista=()=>{
 };
 
 /* ---------- perfil (datos de ejemplo) ---------- */
-const PROFILE={nombre:'Marta López',email:'marta@ejemplo.com',tel:'600 000 000',cp:'28010',ciudad:'Madrid',dia:'Sábado',presu:'20',supers:new Set(['Mercadona','Carrefour','Frutería del barrio']),prefs:new Set(['blanca','avisos','report'])};
+const PROFILE={nombre:'Marta López',email:'marta@ejemplo.com',tel:'600 000 000',cp:'28010',ciudad:'Madrid',dia:'Sábado',presu:'20',supers:new Set(['Mercadona','Carrefour','Frutería del barrio']),prefs:new Set(['blanca','avisos','presu','revisar','familia','report','aviso-prueba'])};
 const MEMBERS=[['Tú','Adulto · administra la cuenta'],['Ana','Adulto'],['Javi','Menor · 12 años'],['Lucía','Menor · 9 años']];
 const SUPS=CHAINS.concat(['Frutería del barrio','Mercado municipal']);
 const PREFS=[['blanca','Prefiero marca blanca si es parecida'],['eco','Prefiero productos ecológicos'],['granel','Compro a granel cuando puedo']];
-const AVISOS=[['avisos','Avisos cuando sube algo que compro'],['report','Report mensual por email'],['lista','Recordatorio de la lista el día de compra']];
+const AVISOS=[['avisos','Avisos cuando sube algo que compro'],['presu','Avisos de presupuesto semanal'],['revisar','Avisos de tickets por revisar'],['familia','Retos en familia'],['report','Report mensual por email'],['lista','Recordatorio de la lista el día de compra']];
 function pfField(k,l,type){return `<label class="field"><span class="lab">${l}</span><input data-pf="${k}" type="${type||'text'}" value="${esc(PROFILE[k])}"></label>`}
 function pfChecks(arr){return arr.map(([k,l])=>`<label class="chk-row"><input type="checkbox" data-pref="${k}" ${PROFILE.prefs.has(k)?'checked':''}>${l}</label>`).join('')}
 V.perfil=()=>`<div class="row2b" style="margin-top:0">
@@ -480,8 +610,8 @@ V.perfil=()=>`<div class="row2b" style="margin-top:0">
  <div class="list-item"><span class="nm">Precios de supermercados<br><span class="muted" style="font-size:12px">Se leen de sus webs públicas, no tienes que conectar nada</span></span></div>
  <div style="margin-top:10px">${pfChecks(AVISOS)}</div>
  <div class="pn-h" style="margin-top:18px"><h3>Plan y privacidad</h3></div>
- <div class="list-item"><span class="nm">Plan Familia · 6 €/mes<br><span class="muted" style="font-size:12px">Hasta 4 personas · +1 €/mes por cada persona extra · se renueva el 1 de diciembre de 2026</span></span><button class="btn s" id="planBtn">Cambiar plan</button></div>
- <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px"><button class="btn s" id="exportBtn">Exportar mis datos</button><button class="btn s" id="deleteBtn">Borrar cuenta</button></div></div>
+ <div class="list-item"><span class="nm">Plan Familia · 5,99 €/mes<br><span class="muted" style="font-size:12px">Prueba gratis hasta el 28 de noviembre · hasta 4 personas · +1 €/mes por cada persona extra</span></span><button class="btn s" data-go="plan">Ver plan</button></div>
+ <div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:14px"><button class="btn s" data-go="privacidad">Privacidad y datos</button><button class="btn s" id="obAgain">Ver la bienvenida otra vez</button></div></div>
 </div>
 <div style="display:flex;justify-content:flex-end;margin-top:16px"><button class="btn" id="saveP">Guardar cambios</button></div>`;
 
@@ -534,7 +664,7 @@ V.ahorro=()=>{
 };
 
 /* ---------- objetivos, report y retos ---------- */
-const GOAL=20;
+let GOAL=20;
 function budgetChart(w,target,from){
   const W=640,H=220,pl=44,pb=26,pt=14,max=Math.max(target*1.3,...w.map(d=>d.v))*1.08,bw=(W-pl)/w.length,Y=v=>H-pb-(H-pt-pb)*v/max;
   let g='';for(let i=0;i<=4;i++){const v=max*i/4,y=Y(v);g+=`<line x1="${pl}" x2="${W}" y1="${y}" y2="${y}" stroke="#ececec"/><text x="${pl-8}" y="${y+4}" font-size="10" fill="#777b86" text-anchor="end">${num(v,0)}</text>`}
@@ -582,16 +712,6 @@ V.objetivos=()=>{
 };
 
 /* ---------- panel lateral ---------- */
-function openTicket(id){
-  const t=T.find(x=>x.id===id);
-  dbody.innerHTML=`<div class="eyebrow">Ticket nº ${String(t.id).padStart(4,'0')}</div><h2 style="font-size:24px;margin:6px 0 2px">${STORES[t.store]}</h2>
-  <div class="muted">${DIA[t.date.getDay()]} ${fd(t.date)} · ${String(t.date.getHours()).padStart(2,'0')}:${String(t.date.getMinutes()).padStart(2,'0')}</div>
-  <div class="mini"><div><span class="lab">Total</span><span class="num b">${eur(t.total)}</span></div><div><span class="lab">Líneas</span><span class="num">${t.lines.length}</span></div><div><span class="lab">Semana</span><span class="num">${fdm(wk(t.date))}</span></div></div>
-  <table><thead><tr><th>Producto</th><th>Categoría</th><th class="n">Importe</th></tr></thead><tbody>
-  ${t.lines.map(l=>{const p=P[l.pid];return `<tr><td>${esc(p.name)}<br><span class="muted" style="font-size:12px">${p.kg?num(l.qty,3)+' kg':l.qty+' ud.'} × ${eur(l.pu)}</span></td><td><select data-pc="${p.id}">${CATS.map(c=>`<option ${c===p.cat?'selected':''}>${c}</option>`).join('')}</select></td><td class="n">${eur(l.total)}</td></tr>`}).join('')}
-  </tbody></table><div class="note">Si cambias una categoría, se aplica a todas las compras de ese producto</div>`;
-  openDrawer();
-}
 function openProduct(id){
   const s=productStats()[id],p=s.p;
   const ser=[['A','#17191c'],['B','#5d2a1a']].map(([st,c])=>({c,pts:s.lines.filter(l=>l.st===st).map(l=>[l.d.getTime(),l.pu])}));
@@ -609,14 +729,234 @@ function openProduct(id){
 }
 const drawer=document.getElementById('drawer'),dbody=document.getElementById('dbody'),scrim=document.getElementById('scrim'),modal=document.getElementById('modal');
 function openDrawer(){drawer.classList.add('on');scrim.classList.add('on');drawer.scrollTop=0}
-function closeAll(){drawer.classList.remove('on');modal.classList.remove('on');scrim.classList.remove('on')}
+function closeAll(){editT=null;drawer.classList.remove('on');modal.classList.remove('on');scrim.classList.remove('on')}
 scrim.onclick=closeAll;document.getElementById('dx').onclick=closeAll;
 document.addEventListener('keydown',e=>{if(e.key==='Escape')closeAll()});
 function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('on');setTimeout(()=>t.classList.remove('on'),2600)}
 
+
+/* ---------- prueba gratis y plan ---------- */
+const TRIAL_END=new Date(2026,10,28);
+const trialLeft=()=>Math.round((TRIAL_END-TODAY)/DAY);
+let cycle='mes',planSel='familia';
+// precios provisionales · anual = 10 meses (2 meses gratis)
+const PLANS=[['basico','Básico','Para probar',0,0,['10 tickets al mes','Resumen y categorías','1 persona']],
+ ['individual','Individual','Para una persona',2.99,29.90,['Tickets ilimitados','Gmail conectado','Avisos y recomendaciones','Objetivos y presupuesto']],
+ ['familia','Familia','Hasta 4 personas · 1,50 € por persona',5.99,59.90,['Todo lo del plan Individual','Una cuenta para todo el hogar','Retos en familia','Report mensual','+1 € al mes por cada persona extra']]];
+V.plan=()=>{
+  const cur=PLANS.find(p=>p[0]===planSel),price=cycle==='mes'?cur[3]:cur[4];
+  return `<div class="trial pe"><span><b class="num">Estás en la prueba gratis del plan Familia</b> · te quedan ${trialLeft()} días. El 25 de noviembre te avisamos y el 28 eliges: seguir, cambiar de plan o quedarte en el Básico. No cobramos nada sin que lo confirmes.</span></div>
+  <div class="pn-h"><div class="seg" id="cyc">${[['mes','Mensual'],['ano','Anual · 2 meses gratis']].map(([k,l])=>`<button data-cy="${k}" class="${cycle===k?'on':''}">${l}</button>`).join('')}</div><span class="lab">Precios provisionales · IVA incluido</span></div>
+  <div class="plans">${PLANS.map(([k,n,d,m,a,f])=>`<div class="plan ${planSel===k?'cur':''}"><span class="lab">${d}</span><h3>${n}</h3><div class="pr">${m?eur(cycle==='mes'?m:a):'0 €'}</div><span class="muted" style="font-size:13px">${m?(cycle==='mes'?'al mes':`al año · sale a ${eur(a/12)} al mes`):'siempre gratis'}</span><ul>${f.map(x=>`<li>${x}</li>`).join('')}</ul><button class="btn ${planSel===k?'':'s'}" data-plan="${k}">${planSel===k?'Tu plan':'Elegir '+n}</button></div>`).join('')}</div>
+  <div class="row2b">
+   <div class="card pn"><div class="pn-h"><h3>Personas del plan</h3><span class="lab">${MEMBERS.length} de 4 incluidas</span></div>${MEMBERS.map(m=>`<div class="list-item"><div class="avatar" style="margin:0"><i>${m[0][0]}</i></div><span class="nm">${m[0]}<br><span class="muted" style="font-size:12px">${m[1]}</span></span></div>`).join('')}
+    <p class="muted" style="font-size:13px;margin-top:12px">A partir de la quinta persona, +1 € al mes por cada una.</p><button class="btn s" id="invite" style="margin-top:12px">+ Invitar a alguien de casa</button></div>
+   <div class="card pn"><div class="pn-h"><h3>Pago y facturas</h3></div>
+    <div class="list-item"><span class="nm">Forma de pago<br><span class="muted" style="font-size:12px">Se añade al terminar la prueba, con la tienda de apps o con tarjeta</span></span><button class="btn s" id="payBtn">Añadir</button></div>
+    <div class="list-item"><span class="nm">Primer cobro<br><span class="muted" style="font-size:12px">${cur[3]?`28/11/26 · ${eur(price)} ${cycle==='mes'?'al mes':'al año'}, solo si confirmas el plan ${cur[1]}`:'Ninguno: el plan Básico es gratis'}</span></span></div>
+    <div class="list-item"><span class="nm">Facturas<br><span class="muted" style="font-size:12px">Aparecerán aquí después del primer cobro</span></span></div>
+    <label class="chk-row" style="margin-top:8px"><input type="checkbox" checked data-pref="aviso-prueba">Avisarme 3 días antes de que acabe la prueba</label>
+    <div class="note">Puedes cancelar cuando quieras desde aquí, sin llamadas ni formularios.</div></div></div>`;
+};
+
+/* ---------- privacidad y datos ---------- */
+const PRIV={gmail:true,fotos:true,anon:false,mkt:false};
+const isMail=t=>t.src?t.src==='Gmail':!(t.store==='F'||t.id%4===0);
+V.privacidad=()=>`<div class="row2b" style="margin-top:0">
+ <div class="card pn"><div class="pn-h"><h3>Qué leemos y qué no</h3><span class="lab">En claro, sin letra pequeña</span></div>
+  <ul class="ok-list"><li>Solo los correos de Gmail con «ticket» en el asunto. El resto de tu correo no se abre ni se guarda.</li><li>De cada ticket guardamos la tienda, la fecha, los productos y los precios.</li><li>Las fotos de los tickets se borran en cuanto se leen, salvo que elijas guardarlas.</li><li>Tus datos se guardan cifrados en servidores de la Unión Europea.</li><li>No vendemos tus datos ni tenemos acuerdos con supermercados.</li></ul></div>
+ <div class="card pn"><div class="pn-h"><h3>Permisos</h3><span class="lab">Cámbialos cuando quieras</span></div>
+  ${[['gmail','Leer tickets de Gmail','Solo asunto con «ticket» · '+esc(PROFILE.email)],['fotos','Guardar las fotos de los tickets','Para poder revisarlas después'],['anon','Usar mis precios de forma anónima','Mejora el comparador. Nunca va con tu nombre'],['mkt','Recibir novedades de The Grocery Report','Nunca publicidad de supermercados']].map(([k,t,d])=>`<label class="list-item" style="cursor:pointer"><span class="nm">${t}<br><span class="muted" style="font-size:12px">${d}</span></span><input type="checkbox" data-priv="${k}" ${PRIV[k]?'checked':''}></label>`).join('')}</div></div>
+<div class="row2b">
+ <div class="card pn"><div class="pn-h"><h3>Últimos accesos a tu correo</h3><span class="lab">Registro</span></div>
+  ${PRIV.gmail?T.filter(isMail).slice(0,5).map(t=>`<div class="list-item"><span class="nm">${DIA[t.date.getDay()]} ${fdm(t.date)} · ${String(t.date.getHours()).padStart(2,'0')}:${String(t.date.getMinutes()).padStart(2,'0')}<br><span class="muted" style="font-size:12px">1 correo leído · ticket de ${STORES[t.store]}</span></span><span class="chip">Gmail</span></div>`).join(''):'<p class="muted">Gmail está desconectado: no leemos ningún correo.</p>'}</div>
+ <div class="card pn"><div class="pn-h"><h3>Tus datos</h3></div>
+  <div class="list-item"><span class="nm">Descargar mis datos<br><span class="muted" style="font-size:12px">${T.length} tickets y tus ajustes, en CSV o JSON</span></span><button class="btn s" id="exportBtn">Descargar</button></div>
+  <div class="list-item"><span class="nm">Borrar las fotos guardadas<br><span class="muted" style="font-size:12px">Los tickets ya leídos se quedan</span></span><button class="btn s" id="delPhotos">Borrar fotos</button></div>
+  <div class="list-item"><span class="nm">${PRIV.gmail?'Desconectar':'Conectar'} Gmail<br><span class="muted" style="font-size:12px">${PRIV.gmail?'Dejamos de leer correos. Tus tickets se quedan':'Vuelve a importar tus tickets automáticamente'}</span></span><button class="btn s" id="discGmail">${PRIV.gmail?'Desconectar':'Conectar'}</button></div>
+  <div class="list-item"><span class="nm">Borrar mi cuenta<br><span class="muted" style="font-size:12px">Se borra todo en 30 días; hasta entonces puedes arrepentirte</span></span><button class="btn s" id="deleteBtn" style="border-color:var(--sienna);color:var(--sienna)">Borrar cuenta</button></div>
+  <div class="note">Política de privacidad · Condiciones de uso · Contacto del delegado de protección de datos</div></div></div>`;
+function openDelete(){
+  modal.classList.remove('wide');
+  modal.innerHTML=`<div class="eyebrow">Borrar cuenta</div><h2>¿Seguro que quieres <span class="b">irte</span>?</h2><p class="muted" style="margin-top:10px">Borraremos tus tickets, tu historial de precios y los datos de tu hogar. Tienes 30 días para arrepentirte; después no se puede recuperar.</p>
+  <label class="chk-row" style="margin-top:14px"><input type="checkbox" checked>Enviarme antes una copia de mis datos</label>
+  <div class="ob-foot"><button class="btn s" data-mclose>Cancelar</button><button class="btn" data-delok style="background:var(--sienna);border-color:var(--sienna)">Borrar mi cuenta</button></div>`;
+  modal.classList.add('on');scrim.classList.add('on');
+}
+
+/* ---------- tu año ---------- */
+const DIAS=['domingos','lunes','martes','miércoles','jueves','viernes','sábados'];
+function yearData(){
+  const tot=sum(T.map(t=>t.total)),days=(TODAY-START)/DAY+1;
+  const ps=productStats().filter(s=>s.n>0),byN=ps.slice().sort((a,b)=>b.n-a.n);
+  const up=ps.filter(s=>s.n>=4&&isFinite(s.varp)).sort((a,b)=>b.varp-a.varp)[0];
+  const bySt={};T.forEach(t=>bySt[t.store]=(bySt[t.store]||0)+t.total);const fav=Object.entries(bySt).sort((a,b)=>b[1]-a[1])[0];
+  const dc=[0,0,0,0,0,0,0];T.forEach(t=>dc[t.date.getDay()]++);
+  const hr=Math.round(sum(T.map(t=>t.date.getHours()+t.date.getMinutes()/60))/T.length);
+  const topC=Object.entries(catSpend(()=>true)).sort((a,b)=>b[1]-a[1])[0];
+  const w=weekly(13),bAvg=sum(w.slice(0,8).map(x=>x.v))/8,saved=sum(w.slice(8,-1).map(x=>bAvg-x.v));
+  const cheap=w.slice(0,-1).filter(x=>x.v>25).reduce((a,b)=>b.v<a.v?b:a);
+  return{tot,proj:tot/days*365,star:byN[0],top5:byN.slice(0,5),up,fav,favPct:fav[1]/tot,dfav:dc.indexOf(Math.max(...dc)),hr,topC,saved,cheap,
+    distinct:new Set(T.flatMap(t=>t.lines.map(l=>l.pid))).size,n:T.length,lines:sum(T.map(t=>t.lines.length))};
+}
+let hideAmt=false;
+V.anual=()=>{
+  const y=yearData(),a=v=>hideAmt?'·· €':eur(v);
+  return `<p class="muted" style="margin-bottom:16px;font-size:14px">Vista previa con tus tickets desde agosto. El resumen completo de 2026 llega el 15 de diciembre.</p>
+  <div class="yr-hero"><span class="lab">Tu 2026 en el súper</span><h2>${y.n} tickets, ${num(y.lines,0)} productos y <em>${a(y.tot)}</em></h2>
+   <p style="font-size:17px;max-width:62ch">A este ritmo, un año completo serían unos ${a(y.proj)}. ${y.saved>0?`Desde que activaste tu meta llevas ${a(y.saved)} ahorrados.`:''}</p></div>
+  <div class="yr">
+   <div class="card"><span class="lab">Tu producto estrella</span><div class="v">${esc(y.star.p.name)}</div><span class="muted">${y.star.n} veces en el carro</span></div>
+   <div class="card"><span class="lab">Tu súper</span><div class="v">${STORES[y.fav[0]]}</div><span class="muted">${num(y.favPct*100,0)} % de lo que gastas</span></div>
+   <div class="card ink"><span class="lab">Cuándo compras</span><div class="v">Los <em>${DIAS[y.dfav]}</em></div><span class="muted">sobre las ${y.hr}:00</span></div>
+   <div class="card"><span class="lab">Donde más se va</span><div class="v">${y.topC[0]}</div><span class="muted">${a(y.topC[1])} · ${num(y.topC[1]/y.tot*100,0)} % del total</span></div>
+   <div class="card"><span class="lab">Lo que más ha subido</span><div class="v">${y.up?esc(y.up.p.name):'—'}</div><span class="muted">${y.up?'+'+num(y.up.varp*100,0)+' % desde agosto':''}</span></div>
+   <div class="card"><span class="lab">Tu semana más barata</span><div class="v">${a(y.cheap.v)}</div><span class="muted">la del ${fdm(y.cheap.s)}</span></div>
+   <div class="card"><span class="lab">Productos distintos</span><div class="v">${y.distinct}</div><span class="muted">en ${CATS.length} categorías</span></div>
+   <div class="card"><span class="lab">Ahorrado con tu meta</span><div class="v">${y.saved>0?a(y.saved):'0 €'}</div><span class="muted">bajando ${GOAL} € a la semana</span></div>
+   <div class="card"><span class="lab">Tickets leídos solos</span><div class="v">${T.filter(isMail).length}</div><span class="muted">desde Gmail, sin hacer nada</span></div>
+  </div>
+  <div class="row2b">
+   <div class="card pn"><div class="pn-h"><h3>Tus 5 del año</h3><span class="lab">Los que más veces compras</span></div>
+    ${y.top5.map((s,i)=>`<div class="list-item click" data-p="${s.p.id}" style="cursor:pointer"><span class="num" style="width:22px">${i+1}</span><span class="nm">${esc(s.p.name)}<br><span class="muted" style="font-size:12px">${s.n} veces · ${a(s.spend)}</span></span></div>`).join('')}</div>
+   <div class="card pn"><div class="pn-h"><h3>Compártelo</h3></div><p class="muted" style="font-size:14px">Creamos una imagen para tus redes con tu año en el súper. Tú eliges si se ven los importes.</p>
+    <label class="chk-row" style="margin-top:12px"><input type="checkbox" id="hideAmt" ${hideAmt?'checked':''}>Ocultar los importes</label>
+    <button class="btn" id="shareYr" style="margin-top:14px">Crear imagen para compartir</button></div></div>`;
+};
+
+/* ---------- centro de avisos ---------- */
+const readN=new Set(['fam2','fam1','tk0']);let nf='all',NS=[];
+function notifs(){
+  const ps=productStats(),ups=ps.filter(s=>s.n>=4&&isFinite(s.varp)&&s.varp>.03).sort((a,b)=>b.varp-a.varp).slice(0,2);
+  const w=weekly(13),bAvg=sum(w.slice(0,8).map(x=>x.v))/8,target=bAvg-GOAL,cw=w[w.length-1],left=target-cw.v;
+  const rr=recs(),li=listItems().filter(s=>!done.has(s.p.id)).length,last=T[0],fl=flagged(last).length;
+  const out=[];
+  ups.forEach((s,i)=>out.push({id:'up'+s.p.id,k:'precios',t:`${s.p.name} ha subido un ${num(s.varp*100,0)} %`,d:'Desde agosto, en lo que tú pagas',when:i?'Ayer':'Hace 2 h',act:()=>openProduct(s.p.id)}));
+  out.push({id:'pres',k:'gasto',t:left>=0?`Vas bien: te quedan ${eur(left)} esta semana`:`Te has pasado ${eur(-left)} del presupuesto de la semana`,d:`Tu meta: bajar ${GOAL} € a la semana`,when:'Hoy, 09:00',act:()=>go('objetivos')});
+  out.push({id:'lista',k:'gasto',t:`El sábado toca compra: ${li} productos en tu lista`,d:'Calculada con tu ritmo de compra',when:'Hoy, 08:00',act:()=>go('lista')});
+  if(fl)out.push({id:'rev'+last.id,k:'cuenta',t:`${fl} ${fl>1?'líneas':'línea'} por revisar en tu ticket de ${STORES[last.store]}`,d:'La IA no está segura de haberlas leído bien',when:'Hoy',act:()=>openTicket(last.id)});
+  out.push({id:'anual',k:'cuenta',t:'Ya puedes ver tu año en el súper',d:'Vista previa del resumen de 2026',when:'Hoy',act:()=>go('anual')});
+  out.push({id:'trial',k:'cuenta',t:`Tu prueba gratis acaba el 28 de noviembre`,d:'Te avisaremos 3 días antes. No cobramos nada sin que lo confirmes',when:'Hoy',act:()=>go('plan')});
+  if(rr[0])out.push({id:'rec',k:'gasto',t:`Nueva forma de ahorrar: −${eur(rr[0].save)} al mes`,d:rr[0].type==='store'?`${rr[0].p.name} en ${STORES[rr[0].to]}`:`${rr[0].alt} en lugar de ${rr[0].p.name.toLowerCase()}`,when:'Ayer',act:()=>go('ahorro')});
+  out.push({id:'fam1',k:'familia',t:'Ana ha conseguido «Mejor precio del mes»',d:'+25 puntos en el reto familiar',when:'Hace 2 días',act:()=>go('objetivos')});
+  out.push({id:'fam2',k:'familia',t:'Javi ha escaneado su primer ticket',d:'+10 puntos en el reto familiar',when:'Hace 4 días',act:()=>go('objetivos')});
+  out.push({id:'tk0',k:'cuenta',t:'Ya tienes el report de septiembre',d:'Gasto, categorías y lo que más ha subido',when:'1 oct.',act:()=>go('objetivos')});
+  return out;
+}
+function updateBell(){NS=notifs();const n=NS.filter(x=>!readN.has(x.id)).length;document.getElementById('bellN').textContent=n||''}
+function openAvisos(){
+  NS=notifs();const f=NS.filter(n=>nf==='all'||n.k===nf);
+  modal.classList.remove('on');
+  dbody.innerHTML=`<div class="eyebrow">Avisos</div><h2>Lo <span class="b">último</span></h2>
+  <div class="seg" style="margin:14px 0 6px">${[['all','Todos'],['precios','Precios'],['gasto','Gasto'],['familia','Familia'],['cuenta','Cuenta']].map(([k,l])=>`<button data-nf="${k}" class="${nf===k?'on':''}">${l}</button>`).join('')}</div>
+  <div>${f.map(n=>`<button class="nt ${readN.has(n.id)?'read':''}" data-n="${n.id}"><span class="dt"></span><span class="nm">${esc(n.t)}<small>${esc(n.d)} · ${n.when}</small></span><span class="go" aria-hidden="true">›</span></button>`).join('')||'<p class="muted" style="padding:20px 0">Nada por aquí.</p>'}</div>
+  <div style="display:flex;gap:8px;margin-top:18px;flex-wrap:wrap"><button class="btn s" data-markall>Marcar todo como leído</button><button class="btn s" data-avcfg>Elegir qué avisos recibir</button></div>`;
+  openDrawer();
+}
+
+/* ---------- corregir tickets ---------- */
+const FLAG=new Set();
+const fkey=(t,pid)=>t.id+'-'+pid;
+const flagged=t=>t.lines.filter(l=>FLAG.has(fkey(t,l.pid)));
+(function(){const t=T[0];[1,3].forEach(i=>t.lines[i]&&FLAG.add(fkey(t,t.lines[i].pid)));T.slice(1).forEach(t=>t.lines.forEach(l=>{if((t.id*7+l.pid*3)%41===0)FLAG.add(fkey(t,l.pid))}))})();
+const ocr=(name,bad)=>{let s=name.normalize('NFD').replace(/[̀-ͯ]/g,'').toUpperCase().split(' ').map(w=>w.slice(0,5)).join(' ').slice(0,24);if(bad)s=s.replace(/O/g,'0').replace(/E/,'3').replace(/A(?=[^A]*$)/,'4');return s};
+let editT=null;
+function openTicket(id){
+  const t=T.find(x=>x.id===id),ed=editT===id,fl=flagged(t);
+  const hm=d=>String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0');
+  const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+  modal.classList.remove('on');
+  if(ed){
+    dbody.innerHTML=`<div class="eyebrow">Corregir ticket nº ${String(t.id).padStart(4,'0')}</div><h2>Corrige lo que <span class="b">no cuadre</span></h2>
+    <p class="muted" style="font-size:14px">Si escribes un producto que ya tienes, se une a él y su historial sigue junto.</p>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px"><label class="field"><span class="lab">Tienda</span><select id="eSt" class="edit-in">${Object.entries(STORES).map(([k,v])=>`<option value="${k}" ${t.store===k?'selected':''}>${v}</option>`).join('')}</select></label><label class="field"><span class="lab">Fecha</span><input id="eDt" class="edit-in" type="date" value="${iso(t.date)}"></label></div>
+    <datalist id="pnames">${P.map(p=>`<option value="${esc(p.name)}">`).join('')}</datalist>
+    <table><thead><tr><th>Producto</th><th class="n">Cantidad</th><th class="n">Precio</th><th></th></tr></thead><tbody id="eRows">
+    ${t.lines.map(l=>{const p=P[l.pid],f=FLAG.has(fkey(t,l.pid));return `<tr data-row><td><input class="edit-in" list="pnames" data-f="name" value="${esc(p.name)}" ${f?'style="border-color:var(--sienna)"':''}><span class="ocr">Leído: ${ocr(p.name,f)}</span></td><td class="n"><input class="edit-in n" type="number" min="0" step="${p.kg?'0.001':'1'}" data-f="qty" value="${l.qty}"></td><td class="n"><input class="edit-in n" type="number" min="0" step="0.01" data-f="pu" value="${l.pu.toFixed(2)}"></td><td><button class="ln-x" data-rmln aria-label="Quitar línea">×</button></td></tr>`}).join('')}
+    </tbody></table>
+    <button class="btn s" data-addln style="margin-top:14px">+ Añadir línea</button>
+    <div class="ob-foot"><button class="btn s" data-cancel="${t.id}">Cancelar</button><button class="btn" data-save="${t.id}">Guardar cambios</button></div>`;
+    return openDrawer();
+  }
+  dbody.innerHTML=`<div class="eyebrow">Ticket nº ${String(t.id).padStart(4,'0')} · ${isMail(t)?'Gmail':'Foto'}</div><h2 style="font-size:24px;margin:6px 0 2px">${STORES[t.store]}</h2>
+  <div class="muted">${DIA[t.date.getDay()]} ${fd(t.date)} · ${hm(t.date)}</div>
+  <div class="mini"><div><span class="lab">Total</span><span class="num b">${eur(t.total)}</span></div><div><span class="lab">Líneas</span><span class="num">${t.lines.length}</span></div><div><span class="lab">Semana</span><span class="num">${fdm(wk(t.date))}</span></div></div>
+  ${fl.length?`<div class="rev"><span><b class="num">${fl.length} ${fl.length>1?'líneas':'línea'} por revisar.</b> La IA no está segura de haberlas leído bien.</span><button class="btn s" data-edit="${t.id}" style="border-color:var(--sienna);color:var(--sienna)">Corregir</button></div>`:''}
+  <table><thead><tr><th>Producto</th><th>Categoría</th><th class="n">Importe</th></tr></thead><tbody>
+  ${t.lines.map(l=>{const p=P[l.pid],f=FLAG.has(fkey(t,l.pid));return `<tr><td>${esc(p.name)}${f?` <span class="chip flag">Revisar</span><button class="mini-b" data-okf="${fkey(t,l.pid)}" data-tk="${t.id}">Está bien</button>`:''}<span class="ocr">Leído: ${ocr(p.name,f)}</span><span class="muted" style="font-size:12px">${p.kg?num(l.qty,3)+' kg':l.qty+' ud.'} × ${eur(l.pu)}</span></td><td><select data-pc="${p.id}">${CATS.map(c=>`<option ${c===p.cat?'selected':''}>${c}</option>`).join('')}</select></td><td class="n">${eur(l.total)}</td></tr>`}).join('')}
+  </tbody></table>
+  <div style="display:flex;gap:8px;margin-top:16px;flex-wrap:wrap"><button class="btn s" data-edit="${t.id}">Corregir ticket</button><button class="btn s" data-orig>Ver ${isMail(t)?'el correo':'la foto'} original</button></div>
+  <div class="note">Si cambias una categoría, se aplica a todas las compras de ese producto</div>`;
+  openDrawer();
+}
+function saveTicket(id){
+  const t=T.find(x=>x.id===id),lines=[];
+  dbody.querySelectorAll('[data-row]').forEach(r=>{
+    const name=r.querySelector('[data-f=name]').value.trim(),qty=parseFloat(r.querySelector('[data-f=qty]').value)||0,pu=parseFloat(r.querySelector('[data-f=pu]').value)||0;
+    if(!name||!qty)return;
+    let p=P.find(x=>x.name.toLowerCase()===name.toLowerCase());
+    if(!p){p={id:P.length,name,cat:'Despensa',price:pu,kg:false,pb:0,ps:0,pf:0,trend:0};P.push(p)}
+    const ex=lines.find(l=>l.pid===p.id);
+    if(ex){ex.qty+=qty;ex.total=Math.round(ex.qty*ex.pu*100)/100}else lines.push({pid:p.id,qty,pu,total:Math.round(qty*pu*100)/100});
+  });
+  if(!lines.length)return toast('El ticket necesita al menos una línea');
+  t.lines=lines;t.total=Math.round(sum(lines.map(l=>l.total))*100)/100;t.store=dbody.querySelector('#eSt').value;
+  const dv=dbody.querySelector('#eDt').value.split('-').map(Number);if(dv.length===3){const d=new Date(t.date);d.setFullYear(dv[0],dv[1]-1,dv[2]);t.date=d}
+  [...FLAG].filter(k=>k.startsWith(t.id+'-')).forEach(k=>FLAG.delete(k));
+  T.sort((a,b)=>b.date-a.date);editT=null;render();openTicket(id);toast('Ticket corregido · tus gráficos ya están al día');
+}
+
+/* ---------- bienvenida ---------- */
+const ob={step:0,src:'correo',ok:false,anon:false,goal:GOAL};
+function openOb(){ob.step=0;drawer.classList.remove('on');obRender();modal.classList.add('on','wide');scrim.classList.add('on')}
+function obRender(){
+  const dots=`<div class="dots">${[0,1,2,3].map(i=>`<i class="${i<=ob.step?'on':''}"></i>`).join('')}</div>`;
+  const mail='<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>',cam='<svg viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>';
+  if(ob.step===0)modal.innerHTML=`${dots}<div class="eyebrow">Bienvenida</div><h2>Lo que gastas en el súper, <span class="b">por fin</span> claro</h2>
+   <p class="muted" style="margin-top:8px">Empieza con los tickets que ya tienes. Elige cómo:</p>
+   <button class="opt ${ob.src==='correo'?'on':''}" data-obs="correo">${mail}<span><b>Conectar Gmail</b><small>Recomendado. Importamos los tickets de los últimos 3 meses y los nuevos llegan solos</small></span></button>
+   <button class="opt ${ob.src==='foto'?'on':''}" data-obs="foto">${cam}<span><b>Hacer fotos a mis tickets</b><small>Sin conectar nada. Haz una foto a cada ticket que guardes</small></span></button>
+   <div class="ob-foot"><button class="skip" data-obskip>Saltar la bienvenida</button><button class="btn" data-obnext>Continuar</button></div>`;
+  if(ob.step===1)modal.innerHTML=`${dots}<div class="eyebrow">Tus datos</div><h2>Antes de nada, <span class="b">tu privacidad</span></h2>
+   <ul class="ok-list">${ob.src==='correo'?'<li>Solo leemos correos con «ticket» en el asunto</li><li>El resto de tu correo no se abre ni se guarda</li>':'<li>Las fotos se borran en cuanto se leen, salvo que elijas guardarlas</li>'}<li>No vendemos tus datos ni tenemos acuerdos con supermercados</li><li>Puedes descargar tus datos o borrar tu cuenta cuando quieras</li></ul>
+   <label class="chk-row"><input type="checkbox" data-obok ${ob.ok?'checked':''}>He leído y acepto la política de privacidad y las condiciones</label>
+   <label class="chk-row"><input type="checkbox" data-obanon ${ob.anon?'checked':''}>Opcional: usar mis precios de forma anónima para mejorar el comparador</label>
+   <div class="ob-foot"><button class="skip" data-obback>Atrás</button><button class="btn" data-obnext ${ob.ok?'':'disabled'}>${ob.src==='correo'?'Conectar con Google':'Continuar'}</button></div>`;
+  if(ob.step===2){
+    const st=ob.src==='correo'?['Buscando correos con «ticket» desde el 1 de agosto…',`${T.length} tickets encontrados`,'Leyendo productos y precios con IA…','Ordenando en 12 categorías…','Buscando dónde puedes ahorrar…']:['Abriendo la cámara…','Leyendo el ticket con IA…','Ordenando en 12 categorías…','Para la demo, añadimos tickets de ejemplo desde agosto…','Buscando dónde puedes ahorrar…'];
+    modal.innerHTML=`${dots}<div class="eyebrow">${ob.src==='correo'?'Importando':'Leyendo'}</div><h2>Un momento, <span class="b">leyendo tickets</span></h2><div class="ob-steps">${st.map(s=>`<p>${s}</p>`).join('')}</div><div class="prog"><i id="obbar"></i></div>`;
+    const ps=modal.querySelectorAll('.ob-steps p'),bar=document.getElementById('obbar');
+    ps.forEach((p,i)=>setTimeout(()=>{if(ob.step!==2)return;p.classList.add('on');bar.style.width=((i+1)/ps.length*100)+'%';if(i===ps.length-1)setTimeout(()=>{if(ob.step===2){ob.step=3;obRender()}},600)},i*550));
+  }
+  if(ob.step===3){
+    const tot=sum(T.map(t=>t.total)),wkAvg=tot/((TODAY-START)/DAY+1)*7,save=sum(recs().map(r=>r.save)),up=productStats().filter(s=>s.n>=4&&isFinite(s.varp)).sort((a,b)=>b.varp-a.varp)[0];
+    modal.innerHTML=`${dots}<div class="eyebrow">Tu primer resumen</div><h2>Esto dicen tus <span class="b">tickets</span></h2>
+    <div class="insight"><span class="lab">Desde el 1 de agosto</span><div class="big">${eur(tot)}</div><div>en ${T.length} tickets · unos ${eur(wkAvg)} a la semana</div></div>
+    <div class="mini"><div><span class="lab">Puedes ahorrar</span><span class="num">${eur(save)}/mes</span></div><div><span class="lab">Lo que más sube</span><span class="num">${up?esc(up.p.name.split(' ').slice(0,2).join(' '))+' +'+num(up.varp*100,0)+' %':'—'}</span></div><div><span class="lab">Tu súper</span><span class="num">${STORES[yearData().fav[0]]}</span></div></div>
+    <p style="font-size:14px;margin-bottom:8px">¿Cuánto quieres bajar a la semana?</p><div style="display:flex;gap:8px;flex-wrap:wrap">${[10,20,30].map(g=>`<button class="chipt ${ob.goal===g?'on':''}" data-obg="${g}">${g} €</button>`).join('')}</div>
+    <p class="muted" style="font-size:13px;margin-top:16px">Empiezas 30 días gratis con el plan Familia. Sin tarjeta.</p>
+    <div class="ob-foot"><button class="btn" data-obdone>Ir a mi resumen</button></div>`;
+  }
+}
+modal.addEventListener('click',e=>{
+  const s=e.target.closest('[data-obs]');if(s){ob.src=s.dataset.obs;return obRender()}
+  const g=e.target.closest('[data-obg]');if(g){ob.goal=+g.dataset.obg;return obRender()}
+  if(e.target.closest('[data-obnext]')){ob.step++;return obRender()}
+  if(e.target.closest('[data-obback]')){ob.step--;return obRender()}
+  if(e.target.closest('[data-obskip]'))return closeAll();
+  if(e.target.closest('[data-obdone]')){GOAL=ob.goal;PROFILE.presu=String(ob.goal);PRIV.anon=ob.anon;PRIV.gmail=ob.src==='correo';closeAll();go('inicio');return toast(`Listo · meta: bajar ${ob.goal} € a la semana`)}
+  if(e.target.closest('[data-mclose]'))return closeAll();
+  if(e.target.closest('[data-delok]')){closeAll();return toast('Solicitud recibida · en este prototipo no se borra nada')}
+});
+modal.addEventListener('change',e=>{
+  if(e.target.matches('[data-obok]')){ob.ok=e.target.checked;modal.querySelector('[data-obnext]').disabled=!ob.ok}
+  if(e.target.matches('[data-obanon]'))ob.anon=e.target.checked;
+});
+
 /* ---------- subir ticket (simulado) ---------- */
 let upMode='foto';
 function openUpload(){
+  modal.classList.remove('wide');drawer.classList.remove('on');
   modal.innerHTML=`<div class="eyebrow">Nuevo ticket</div><h2 style="font-size:24px;margin-top:6px">Sube tu <span class="b">ticket</span></h2>
   <div class="seg" id="useg" style="margin-top:18px">${[['foto','Foto'],['correo','Gmail']].map(([k,l])=>`<button data-k="${k}" class="${upMode===k?'on':''}">${l}</button>`).join('')}</div>
   <div class="drop" id="drop">${upMode==='correo'?`<svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><div><b>Gmail conectado</b></div><div class="num b" style="margin-top:6px">Filtro: asunto contiene «ticket»</div><div class="muted" style="font-size:12px;margin-top:6px">Solo leemos esos correos. Los tickets nuevos se añaden solos.</div>`
@@ -632,9 +972,10 @@ function runUpload(){
   const steps=[upMode==='correo'?'Buscando correos con «ticket» en el asunto…':'Leyendo la foto con IA…','Detectando líneas de producto…','Clasificando por categoría…','Listo'],bar=document.getElementById('upbar'),st=document.getElementById('upst');
   document.getElementById('ugo').disabled=true;
   steps.forEach((s,i)=>setTimeout(()=>{st.textContent=s;bar.style.width=((i+1)/steps.length*100)+'%';
-    if(i===steps.length-1)setTimeout(()=>{const t=makeTicket('A',TODAY,true);t.src=upMode==='foto'?'Foto':'Gmail';t.date=new Date();t.date.setFullYear(2026,9,29);T.unshift(t);closeAll();render();toast(`Ticket añadido · ${t.lines.length} líneas · ${eur(t.total)}`);setTimeout(()=>openTicket(t.id),350)},400)},i*650));
+    if(i===steps.length-1)setTimeout(()=>{const t=makeTicket('A',TODAY,true);t.src=upMode==='foto'?'Foto':'Gmail';t.date=new Date();t.date.setFullYear(2026,9,29);T.unshift(t);FLAG.add(fkey(t,t.lines[Math.min(1,t.lines.length-1)].pid));closeAll();render();toast(`Ticket añadido · ${t.lines.length} líneas · ${eur(t.total)}`);setTimeout(()=>openTicket(t.id),350)},400)},i*650));
 }
 document.getElementById('upBtn').onclick=openUpload;
+document.getElementById('bellBtn').onclick=openAvisos;
 
 /* ---------- navegación ---------- */
 let cur='inicio';
@@ -642,12 +983,24 @@ function render(){
   document.getElementById('eyebrow').textContent=titles[cur][0];document.getElementById('title').innerHTML=titles[cur][1];
   document.getElementById('view').innerHTML=V[cur]();
   document.querySelectorAll('#nav button').forEach(b=>b.classList.toggle('on',b.dataset.v===cur));
-  document.getElementById('cntT').textContent=T.length;document.getElementById('cntL').textContent=listItems().filter(s=>!done.has(s.p.id)).length;
+  document.getElementById('cntT').textContent=T.length;updateBell();document.getElementById('cntL').textContent=listItems().filter(s=>!done.has(s.p.id)).length;
 }
 function go(v){cur=v;render();window.scrollTo(0,0)}
 document.getElementById('nav').addEventListener('click',e=>{const b=e.target.closest('button');if(b)go(b.dataset.v)});
 const view=document.getElementById('view');
 view.addEventListener('click',e=>{
+  const pl=e.target.closest('[data-plan]');if(pl){planSel=pl.dataset.plan;render();return toast(planSel==='familia'?'Sigues en el plan Familia':`Al terminar la prueba pasarás al plan ${PLANS.find(x=>x[0]===planSel)[1]}`)}
+  const cy=e.target.closest('[data-cy]');if(cy){cycle=cy.dataset.cy;return render()}
+  if(e.target.dataset.priv){PRIV[e.target.dataset.priv]=e.target.checked;render();return toast('Permiso actualizado')}
+  if(e.target.id==='discGmail'){PRIV.gmail=!PRIV.gmail;render();return toast(PRIV.gmail?'Gmail conectado':'Gmail desconectado · ya no leemos tu correo')}
+  if(e.target.id==='delPhotos')return toast('Fotos borradas · tus tickets se quedan');
+  if(e.target.id==='payBtn')return toast('En la app real se abre el pago de la tienda de apps');
+  if(e.target.id==='deleteBtn')return openDelete();
+  if(e.target.id==='obAgain')return openOb();
+  if(e.target.id==='shareYr')return toast(hideAmt?'Imagen lista, sin importes':'Imagen lista para compartir');
+  if(e.target.id==='hideAmt'){hideAmt=e.target.checked;return render()}
+  const nd=e.target.closest('[data-node]');if(nd){netSel=+nd.dataset.node;return render()}
+  const nmb=e.target.closest('[data-nm]');if(nmb){netMin=+nmb.dataset.nm;return render()}
   const t=e.target.closest('[data-t]'),p=e.target.closest('[data-p]'),c=e.target.closest('[data-cat]'),g=e.target.closest('[data-go]');
   if(t)return openTicket(+t.dataset.t);
   if(p)return openProduct(+p.dataset.p);
@@ -677,8 +1030,22 @@ view.addEventListener('change',e=>{
   if(e.target.id==='ccat'){ccat=e.target.value;render()}
   if(e.target.dataset.l){const id=+e.target.dataset.l;e.target.checked?done.add(id):done.delete(id);render()}
 });
+dbody.addEventListener('click',e=>{
+  const ed=e.target.closest('[data-edit]');if(ed){editT=+ed.dataset.edit;return openTicket(editT)}
+  const sv=e.target.closest('[data-save]');if(sv)return saveTicket(+sv.dataset.save);
+  const cc=e.target.closest('[data-cancel]');if(cc){editT=null;return openTicket(+cc.dataset.cancel)}
+  if(e.target.closest('[data-rmln]')){e.target.closest('tr').remove();return}
+  if(e.target.closest('[data-addln]')){document.getElementById('eRows').insertAdjacentHTML('beforeend','<tr data-row><td><input class="edit-in" list="pnames" data-f="name" placeholder="Producto"></td><td class="n"><input class="edit-in n" type="number" min="0" step="1" data-f="qty" value="1"></td><td class="n"><input class="edit-in n" type="number" min="0" step="0.01" data-f="pu" placeholder="0,00"></td><td><button class="ln-x" data-rmln aria-label="Quitar línea">×</button></td></tr>');return document.querySelector('#eRows tr:last-child input').focus()}
+  const ok=e.target.closest('[data-okf]');if(ok){FLAG.delete(ok.dataset.okf);render();openTicket(+ok.dataset.tk);return toast('Línea confirmada')}
+  if(e.target.closest('[data-orig]'))return toast('En la app real verás aquí el ticket original');
+  const nfb=e.target.closest('[data-nf]');if(nfb){nf=nfb.dataset.nf;return openAvisos()}
+  const nb=e.target.closest('[data-n]');if(nb){const n=NS.find(x=>x.id===nb.dataset.n);readN.add(n.id);updateBell();closeAll();return setTimeout(n.act,180)}
+  if(e.target.closest('[data-markall]')){NS.forEach(n=>readN.add(n.id));updateBell();return openAvisos()}
+  if(e.target.closest('[data-avcfg]')){closeAll();return go('perfil')}
+});
 dbody.addEventListener('change',e=>{if(e.target.dataset.pc){P[+e.target.dataset.pc].cat=e.target.value;render();toast('Categoría actualizada en todas las compras')}});
 render();
+setTimeout(openOb,500);
 </script>
 
 </body></html>
